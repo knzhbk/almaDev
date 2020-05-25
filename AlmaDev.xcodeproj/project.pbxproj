@@ -13,8 +13,9 @@
 		18FB9F072475B8A4002B46F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FB9F052475B8A4002B46F3 /* Main.storyboard */; };
 		18FB9F092475B8A4002B46F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18FB9F082475B8A4002B46F3 /* Assets.xcassets */; };
 		18FB9F0C2475B8A4002B46F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FB9F0A2475B8A4002B46F3 /* LaunchScreen.storyboard */; };
-		18FB9F182475B8DB002B46F3 /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = 18FB9F172475B8DB002B46F3 /* .keep */; };
-		18FB9F1A2475B8E7002B46F3 /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = 18FB9F192475B8E7002B46F3 /* .keep */; };
+		C66768D8247BCEEF007BAF99 /* ScoreBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66768D7247BCEEF007BAF99 /* ScoreBoardViewController.swift */; };
+		C66768DA247BD24E007BAF99 /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66768D9247BD24E007BAF99 /* ScoreCell.swift */; };
+		C66768DC247BD9E2007BAF99 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66768DB247BD9E2007BAF99 /* Score.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +27,9 @@
 		18FB9F082475B8A4002B46F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18FB9F0B2475B8A4002B46F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18FB9F0D2475B8A4002B46F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18FB9F172475B8DB002B46F3 /* .keep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
-		18FB9F192475B8E7002B46F3 /* .keep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
+		C66768D7247BCEEF007BAF99 /* ScoreBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardViewController.swift; sourceTree = "<group>"; };
+		C66768D9247BD24E007BAF99 /* ScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
+		C66768DB247BD9E2007BAF99 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +67,7 @@
 				18FB9F142475B8B8002B46F3 /* Model */,
 				18FB9EFF2475B8A4002B46F3 /* AppDelegate.swift */,
 				18FB9F012475B8A4002B46F3 /* SceneDelegate.swift */,
-				18FB9F052475B8A4002B46F3 /* Main.storyboard */,
 				18FB9F082475B8A4002B46F3 /* Assets.xcassets */,
-				18FB9F0A2475B8A4002B46F3 /* LaunchScreen.storyboard */,
 				18FB9F0D2475B8A4002B46F3 /* Info.plist */,
 			);
 			path = AlmaDev;
@@ -76,7 +76,7 @@
 		18FB9F142475B8B8002B46F3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				18FB9F192475B8E7002B46F3 /* .keep */,
+				C66768DB247BD9E2007BAF99 /* Score.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -84,7 +84,9 @@
 		18FB9F152475B8BE002B46F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				18FB9F172475B8DB002B46F3 /* .keep */,
+				C66768D9247BD24E007BAF99 /* ScoreCell.swift */,
+				18FB9F052475B8A4002B46F3 /* Main.storyboard */,
+				18FB9F0A2475B8A4002B46F3 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				18FB9F032475B8A4002B46F3 /* ViewController.swift */,
+				C66768D7247BCEEF007BAF99 /* ScoreBoardViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -155,8 +158,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18FB9F1A2475B8E7002B46F3 /* .keep in Resources */,
-				18FB9F182475B8DB002B46F3 /* .keep in Resources */,
 				18FB9F0C2475B8A4002B46F3 /* LaunchScreen.storyboard in Resources */,
 				18FB9F092475B8A4002B46F3 /* Assets.xcassets in Resources */,
 				18FB9F072475B8A4002B46F3 /* Main.storyboard in Resources */,
@@ -170,8 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C66768D8247BCEEF007BAF99 /* ScoreBoardViewController.swift in Sources */,
 				18FB9F042475B8A4002B46F3 /* ViewController.swift in Sources */,
 				18FB9F002475B8A4002B46F3 /* AppDelegate.swift in Sources */,
+				C66768DA247BD24E007BAF99 /* ScoreCell.swift in Sources */,
+				C66768DC247BD9E2007BAF99 /* Score.swift in Sources */,
 				18FB9F022475B8A4002B46F3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

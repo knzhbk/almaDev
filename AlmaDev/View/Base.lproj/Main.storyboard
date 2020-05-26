@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="osO-cG-IaZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -32,19 +32,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score Board" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3U-Mc-Bag">
-                                <rect key="frame" x="110" y="64" width="194" height="43"/>
+                                <rect key="frame" x="110" y="108" width="194" height="43"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="score_header" translatesAutoresizingMaskIntoConstraints="NO" id="L9f-7c-jA4">
-                                <rect key="frame" x="-6" y="147" width="427" height="244"/>
+                                <rect key="frame" x="-6" y="191" width="427" height="244"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="244" id="pXz-Rc-Oit"/>
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8xC-fs-Ubk">
-                                <rect key="frame" x="1" y="422" width="413" height="466"/>
+                                <rect key="frame" x="1" y="466" width="413" height="422"/>
                                 <color key="backgroundColor" red="0.26274509800000001" green="0.1333333333" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ScoreCell" rowHeight="109" id="7aj-Va-z8C" customClass="ScoreCell" customModule="AlmaDev" customModuleProvider="target">
@@ -119,7 +119,7 @@
         <scene sceneID="87E-uk-EqR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IIb-qd-gk2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Results" id="6AD-ll-8QW"/>
+                    <tabBarItem key="tabBarItem" title="Results" image="achievments" id="6AD-ll-8QW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H62-57-5s1">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -140,8 +140,10 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="osO-cG-IaZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5wr-a5-QDJ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.26274509800000001" green="0.1333333333" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="PLO-cT-dIb" kind="relationship" relationship="viewControllers" id="jzk-5R-ZgT"/>
@@ -260,7 +262,7 @@
         <scene sceneID="5oy-Sy-Jbo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ucq-99-rL1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="pNf-dx-xqz"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="pNf-dx-xqz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xiM-9z-q6h">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -279,7 +281,7 @@
         <scene sceneID="yhZ-i0-zQ6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PLO-cT-dIb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Quiz" id="FMw-we-Q0v"/>
+                    <tabBarItem key="tabBarItem" title="Quiz" image="party" id="FMw-we-Q0v"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aQk-J0-maW">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -296,6 +298,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="achievments" width="30" height="30"/>
+        <image name="party" width="30" height="30"/>
         <image name="score_header" width="409" height="246"/>
+        <image name="settings" width="30" height="30"/>
     </resources>
 </document>

@@ -281,7 +281,7 @@
         <scene sceneID="yhZ-i0-zQ6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PLO-cT-dIb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Quiz" image="party" id="FMw-we-Q0v"/>
+                    <tabBarItem key="tabBarItem" title="Quiz" image="Party" id="FMw-we-Q0v"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aQk-J0-maW">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -298,8 +298,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Party" width="30" height="30"/>
         <image name="achievments" width="30" height="30"/>
-        <image name="party" width="30" height="30"/>
         <image name="score_header" width="409" height="246"/>
         <image name="settings" width="30" height="30"/>
     </resources>

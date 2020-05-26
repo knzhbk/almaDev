@@ -7,6 +7,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="3uO-BA-9Bd">
+            <objects>
+                <viewController id="eEM-H2-ljt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uzv-EZ-9F4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Gpa-MP-jgT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jlt-Ov-Ol7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xh8-WM-2UW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1958" y="-691"/>
+        </scene>
         <!--Score Board View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>

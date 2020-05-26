@@ -7,18 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		088A7D3FA4858B48B060E549 /* Pods_AlmaDev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F2F645503C9684513FCE34E /* Pods_AlmaDev.framework */; };
 		18FB9F002475B8A4002B46F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB9EFF2475B8A4002B46F3 /* AppDelegate.swift */; };
 		18FB9F022475B8A4002B46F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB9F012475B8A4002B46F3 /* SceneDelegate.swift */; };
 		18FB9F042475B8A4002B46F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB9F032475B8A4002B46F3 /* ViewController.swift */; };
 		18FB9F072475B8A4002B46F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FB9F052475B8A4002B46F3 /* Main.storyboard */; };
 		18FB9F092475B8A4002B46F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18FB9F082475B8A4002B46F3 /* Assets.xcassets */; };
 		18FB9F0C2475B8A4002B46F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FB9F0A2475B8A4002B46F3 /* LaunchScreen.storyboard */; };
+		9854C4A0247D7C3D003B44FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9854C49F247D7C3D003B44FD /* GoogleService-Info.plist */; };
 		C66768D8247BCEEF007BAF99 /* ScoreBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66768D7247BCEEF007BAF99 /* ScoreBoardViewController.swift */; };
 		C66768DA247BD24E007BAF99 /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66768D9247BD24E007BAF99 /* ScoreCell.swift */; };
 		C66768DC247BD9E2007BAF99 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66768DB247BD9E2007BAF99 /* Score.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04F559CD8C98CB4E27F12090 /* Pods-AlmaDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlmaDev.release.xcconfig"; path = "Target Support Files/Pods-AlmaDev/Pods-AlmaDev.release.xcconfig"; sourceTree = "<group>"; };
 		18FB9EFC2475B8A4002B46F3 /* AlmaDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlmaDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FB9EFF2475B8A4002B46F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18FB9F012475B8A4002B46F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,6 +30,9 @@
 		18FB9F082475B8A4002B46F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18FB9F0B2475B8A4002B46F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18FB9F0D2475B8A4002B46F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DF072B24A3967B32DD8A728 /* Pods-AlmaDev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlmaDev.debug.xcconfig"; path = "Target Support Files/Pods-AlmaDev/Pods-AlmaDev.debug.xcconfig"; sourceTree = "<group>"; };
+		8F2F645503C9684513FCE34E /* Pods_AlmaDev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlmaDev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9854C49F247D7C3D003B44FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C66768D7247BCEEF007BAF99 /* ScoreBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardViewController.swift; sourceTree = "<group>"; };
 		C66768D9247BD24E007BAF99 /* ScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
 		C66768DB247BD9E2007BAF99 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
@@ -37,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				088A7D3FA4858B48B060E549 /* Pods_AlmaDev.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +55,8 @@
 			children = (
 				18FB9EFE2475B8A4002B46F3 /* AlmaDev */,
 				18FB9EFD2475B8A4002B46F3 /* Products */,
+				36620594E97CF03B9EE94E8C /* Pods */,
+				7D1791540F59654E9A77EBA7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +71,7 @@
 		18FB9EFE2475B8A4002B46F3 /* AlmaDev */ = {
 			isa = PBXGroup;
 			children = (
+				9854C4A1247D7C51003B44FD /* Helpers */,
 				18FB9F162475B8C4002B46F3 /* Controller */,
 				18FB9F152475B8BE002B46F3 /* View */,
 				18FB9F142475B8B8002B46F3 /* Model */,
@@ -100,6 +110,32 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		36620594E97CF03B9EE94E8C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8DF072B24A3967B32DD8A728 /* Pods-AlmaDev.debug.xcconfig */,
+				04F559CD8C98CB4E27F12090 /* Pods-AlmaDev.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7D1791540F59654E9A77EBA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F2F645503C9684513FCE34E /* Pods_AlmaDev.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9854C4A1247D7C51003B44FD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9854C49F247D7C3D003B44FD /* GoogleService-Info.plist */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,9 +143,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18FB9F102475B8A4002B46F3 /* Build configuration list for PBXNativeTarget "AlmaDev" */;
 			buildPhases = (
+				D99943E1B5911BCD693D4A9E /* [CP] Check Pods Manifest.lock */,
 				18FB9EF82475B8A4002B46F3 /* Sources */,
 				18FB9EF92475B8A4002B46F3 /* Frameworks */,
 				18FB9EFA2475B8A4002B46F3 /* Resources */,
+				3C478C3E73BF718A21B8CF18 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,10 +199,53 @@
 				18FB9F0C2475B8A4002B46F3 /* LaunchScreen.storyboard in Resources */,
 				18FB9F092475B8A4002B46F3 /* Assets.xcassets in Resources */,
 				18FB9F072475B8A4002B46F3 /* Main.storyboard in Resources */,
+				9854C4A0247D7C3D003B44FD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C478C3E73BF718A21B8CF18 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlmaDev/Pods-AlmaDev-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlmaDev/Pods-AlmaDev-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlmaDev/Pods-AlmaDev-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D99943E1B5911BCD693D4A9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlmaDev-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18FB9EF82475B8A4002B46F3 /* Sources */ = {
@@ -318,6 +399,7 @@
 		};
 		18FB9F112475B8A4002B46F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DF072B24A3967B32DD8A728 /* Pods-AlmaDev.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -335,6 +417,7 @@
 		};
 		18FB9F122475B8A4002B46F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04F559CD8C98CB4E27F12090 /* Pods-AlmaDev.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

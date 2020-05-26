@@ -119,7 +119,7 @@
         <scene sceneID="87E-uk-EqR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IIb-qd-gk2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Results" id="6AD-ll-8QW"/>
+                    <tabBarItem key="tabBarItem" title="Results" selectedImage="book.fill" catalog="system" id="6AD-ll-8QW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H62-57-5s1">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -140,6 +140,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="osO-cG-IaZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5wr-a5-QDJ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -260,7 +261,7 @@
         <scene sceneID="5oy-Sy-Jbo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ucq-99-rL1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="pNf-dx-xqz"/>
+                    <tabBarItem key="tabBarItem" title="Settings" selectedImage="pencil.and.ellipsis.rectangle" catalog="system" id="pNf-dx-xqz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xiM-9z-q6h">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -279,7 +280,7 @@
         <scene sceneID="yhZ-i0-zQ6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PLO-cT-dIb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Quiz" id="FMw-we-Q0v"/>
+                    <tabBarItem key="tabBarItem" title="Quiz" selectedImage="pencil" catalog="system" id="FMw-we-Q0v"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aQk-J0-maW">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -296,6 +297,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="book.fill" catalog="system" width="128" height="100"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="pencil.and.ellipsis.rectangle" catalog="system" width="128" height="81"/>
         <image name="score_header" width="409" height="246"/>
     </resources>
 </document>

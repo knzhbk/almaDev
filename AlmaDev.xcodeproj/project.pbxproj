@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		088A7D3FA4858B48B060E549 /* Pods_AlmaDev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F2F645503C9684513FCE34E /* Pods_AlmaDev.framework */; };
+		18AFCA12247DFBC000141125 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AFCA11247DFBC000141125 /* ProgressViewController.swift */; };
 		18FB9F002475B8A4002B46F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB9EFF2475B8A4002B46F3 /* AppDelegate.swift */; };
 		18FB9F022475B8A4002B46F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB9F012475B8A4002B46F3 /* SceneDelegate.swift */; };
 		18FB9F042475B8A4002B46F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB9F032475B8A4002B46F3 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		04F559CD8C98CB4E27F12090 /* Pods-AlmaDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlmaDev.release.xcconfig"; path = "Target Support Files/Pods-AlmaDev/Pods-AlmaDev.release.xcconfig"; sourceTree = "<group>"; };
+		18AFCA11247DFBC000141125 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		18FB9EFC2475B8A4002B46F3 /* AlmaDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlmaDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FB9EFF2475B8A4002B46F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18FB9F012475B8A4002B46F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				18FB9F032475B8A4002B46F3 /* ViewController.swift */,
 				C66768D7247BCEEF007BAF99 /* ScoreBoardViewController.swift */,
+				18AFCA11247DFBC000141125 /* ProgressViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -116,7 +119,6 @@
 				8DF072B24A3967B32DD8A728 /* Pods-AlmaDev.debug.xcconfig */,
 				04F559CD8C98CB4E27F12090 /* Pods-AlmaDev.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -255,6 +257,7 @@
 				C66768D8247BCEEF007BAF99 /* ScoreBoardViewController.swift in Sources */,
 				18FB9F042475B8A4002B46F3 /* ViewController.swift in Sources */,
 				18FB9F002475B8A4002B46F3 /* AppDelegate.swift in Sources */,
+				18AFCA12247DFBC000141125 /* ProgressViewController.swift in Sources */,
 				C66768DA247BD24E007BAF99 /* ScoreCell.swift in Sources */,
 				C66768DC247BD9E2007BAF99 /* Score.swift in Sources */,
 				18FB9F022475B8A4002B46F3 /* SceneDelegate.swift in Sources */,

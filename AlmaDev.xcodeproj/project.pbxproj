@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		088A7D3FA4858B48B060E549 /* Pods_AlmaDev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F2F645503C9684513FCE34E /* Pods_AlmaDev.framework */; };
 		18079123247EDE07000B7F41 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18079122247EDE07000B7F41 /* CategoryViewController.swift */; };
+		1807912524805473000B7F41 /* NotificationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807912424805473000B7F41 /* NotificationProvider.swift */; };
+		18079127248057C2000B7F41 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18079126248057C2000B7F41 /* LevelViewController.swift */; };
+		1807912924805ABC000B7F41 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807912824805ABC000B7F41 /* Category.swift */; };
+		1807912B248060EE000B7F41 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807912A248060EE000B7F41 /* Question.swift */; };
+		1807912D248062B2000B7F41 /* QuestionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807912C248062B2000B7F41 /* QuestionProvider.swift */; };
 		18AFCA12247DFBC000141125 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AFCA11247DFBC000141125 /* ProgressViewController.swift */; };
 		18AFCA16247ED0E300141125 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AFCA15247ED0E300141125 /* CategoryCollectionViewCell.swift */; };
 		18FB9F002475B8A4002B46F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB9EFF2475B8A4002B46F3 /* AppDelegate.swift */; };
@@ -26,6 +31,11 @@
 /* Begin PBXFileReference section */
 		04F559CD8C98CB4E27F12090 /* Pods-AlmaDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlmaDev.release.xcconfig"; path = "Target Support Files/Pods-AlmaDev/Pods-AlmaDev.release.xcconfig"; sourceTree = "<group>"; };
 		18079122247EDE07000B7F41 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		1807912424805473000B7F41 /* NotificationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationProvider.swift; sourceTree = "<group>"; };
+		18079126248057C2000B7F41 /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
+		1807912824805ABC000B7F41 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		1807912A248060EE000B7F41 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		1807912C248062B2000B7F41 /* QuestionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionProvider.swift; sourceTree = "<group>"; };
 		18AFCA11247DFBC000141125 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		18AFCA15247ED0E300141125 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		18FB9EFC2475B8A4002B46F3 /* AlmaDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlmaDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +103,10 @@
 			isa = PBXGroup;
 			children = (
 				C66768DB247BD9E2007BAF99 /* Score.swift */,
+				1807912424805473000B7F41 /* NotificationProvider.swift */,
+				1807912824805ABC000B7F41 /* Category.swift */,
+				1807912A248060EE000B7F41 /* Question.swift */,
+				1807912C248062B2000B7F41 /* QuestionProvider.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,6 +114,7 @@
 		18FB9F152475B8BE002B46F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18AFCA15247ED0E300141125 /* CategoryCollectionViewCell.swift */,
 				C66768D9247BD24E007BAF99 /* ScoreCell.swift */,
 				18FB9F052475B8A4002B46F3 /* Main.storyboard */,
 				18FB9F0A2475B8A4002B46F3 /* LaunchScreen.storyboard */,
@@ -113,8 +128,8 @@
 				18FB9F032475B8A4002B46F3 /* ViewController.swift */,
 				C66768D7247BCEEF007BAF99 /* ScoreBoardViewController.swift */,
 				18AFCA11247DFBC000141125 /* ProgressViewController.swift */,
-				18AFCA15247ED0E300141125 /* CategoryCollectionViewCell.swift */,
 				18079122247EDE07000B7F41 /* CategoryViewController.swift */,
+				18079126248057C2000B7F41 /* LevelViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -260,15 +275,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18079127248057C2000B7F41 /* LevelViewController.swift in Sources */,
 				18079123247EDE07000B7F41 /* CategoryViewController.swift in Sources */,
 				C66768D8247BCEEF007BAF99 /* ScoreBoardViewController.swift in Sources */,
 				18FB9F042475B8A4002B46F3 /* ViewController.swift in Sources */,
+				1807912D248062B2000B7F41 /* QuestionProvider.swift in Sources */,
 				18FB9F002475B8A4002B46F3 /* AppDelegate.swift in Sources */,
 				18AFCA16247ED0E300141125 /* CategoryCollectionViewCell.swift in Sources */,
 				18AFCA12247DFBC000141125 /* ProgressViewController.swift in Sources */,
 				C66768DA247BD24E007BAF99 /* ScoreCell.swift in Sources */,
+				1807912B248060EE000B7F41 /* Question.swift in Sources */,
+				1807912524805473000B7F41 /* NotificationProvider.swift in Sources */,
 				C66768DC247BD9E2007BAF99 /* Score.swift in Sources */,
 				18FB9F022475B8A4002B46F3 /* SceneDelegate.swift in Sources */,
+				1807912924805ABC000B7F41 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

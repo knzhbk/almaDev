@@ -8,13 +8,8 @@
 
 import UIKit
 
-class CategoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class CategoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
     var categoriesArray = ["animals", "art", "computers", "geography", "sport", "music", "films", "nature", "cartoons", "books"]
-    
-    
-    
-    
-    
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -32,10 +27,25 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         
     }
     
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+
+        return UIEdgeInsets(top: 10, left: 50, bottom: 10, right: 50)
+    }
+    
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
         
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let categoryCell = categoriesArray[indexPath.item]
+        
+        NotificationCenter.default.post(name: NOTIFICATION_CHOSEN_CELL, object: categoryCell )
     }
     
 
@@ -49,6 +59,18 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let destination = segue.destination as? LevelViewController,
+        let cell = sender as? CategoryCollectionViewCell,
+            let indexPath = CategoryCollectionView.indexPath(for: cell)
+        {
+            let category = categoriesArray[indexPath.item]
+            destination.category = Category(category: category)
+        }
+        
+        
+    }
     
     
     

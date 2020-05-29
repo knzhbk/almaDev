@@ -24,6 +24,13 @@
                                     <segue destination="Njh-Va-3oi" kind="show" id="MdD-gl-6c7"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSj-rI-Ztl">
+                                <rect key="frame" x="184" y="156" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Gpa-MP-jgT"/>
@@ -470,7 +477,6 @@
         <!--About Us Detail View Controller-->
         <scene sceneID="9rR-jo-Xw2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vfR-gb-3bM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="xDF-lL-qhH" customClass="AboutUsDetailViewController" customModule="AlmaDev" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2WT-Bx-FwD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -594,6 +600,7 @@
                         <outlet property="telegramTextView" destination="eB4-Pf-Z0e" id="8Tm-kf-r36"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vfR-gb-3bM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4418.840579710145" y="799.55357142857144"/>
         </scene>

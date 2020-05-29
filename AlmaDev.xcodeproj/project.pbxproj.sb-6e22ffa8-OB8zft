@@ -15,8 +15,11 @@
 		18FB9F092475B8A4002B46F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18FB9F082475B8A4002B46F3 /* Assets.xcassets */; };
 		18FB9F0C2475B8A4002B46F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FB9F0A2475B8A4002B46F3 /* LaunchScreen.storyboard */; };
 		9854C4A0247D7C3D003B44FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9854C49F247D7C3D003B44FD /* GoogleService-Info.plist */; };
+<<<<<<< HEAD
 		C61ED4362480484900889FC9 /* AboutUsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61ED4352480484900889FC9 /* AboutUsDetailViewController.swift */; };
+=======
 		988971F1247EB65500C5B85A /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988971F0247EB65500C5B85A /* TestViewController.swift */; };
+>>>>>>> test v1
 		C62EEE44247E60E800079209 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62EEE43247E60E800079209 /* SettingsViewController.swift */; };
 		C66768D8247BCEEF007BAF99 /* ScoreBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66768D7247BCEEF007BAF99 /* ScoreBoardViewController.swift */; };
 		C66768DA247BD24E007BAF99 /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66768D9247BD24E007BAF99 /* ScoreCell.swift */; };
@@ -39,8 +42,11 @@
 		8DF072B24A3967B32DD8A728 /* Pods-AlmaDev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlmaDev.debug.xcconfig"; path = "Target Support Files/Pods-AlmaDev/Pods-AlmaDev.debug.xcconfig"; sourceTree = "<group>"; };
 		8F2F645503C9684513FCE34E /* Pods_AlmaDev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlmaDev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9854C49F247D7C3D003B44FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		C61ED4352480484900889FC9 /* AboutUsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsDetailViewController.swift; sourceTree = "<group>"; };
+=======
 		988971F0247EB65500C5B85A /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+>>>>>>> test v1
 		C62EEE43247E60E800079209 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C66768D7247BCEEF007BAF99 /* ScoreBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardViewController.swift; sourceTree = "<group>"; };
 		C66768D9247BD24E007BAF99 /* ScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
@@ -121,9 +127,12 @@
 				18FB9F032475B8A4002B46F3 /* ViewController.swift */,
 				C66768D7247BCEEF007BAF99 /* ScoreBoardViewController.swift */,
 				C62EEE43247E60E800079209 /* SettingsViewController.swift */,
+<<<<<<< HEAD
 				C6E4186524803196002CB7B9 /* AboutUsViewController.swift */,
 				C61ED4352480484900889FC9 /* AboutUsDetailViewController.swift */,
+=======
 				988971F0247EB65500C5B85A /* TestViewController.swift */,
+>>>>>>> test v1
 			);
 			path = Controller;
 			sourceTree = "<group>";

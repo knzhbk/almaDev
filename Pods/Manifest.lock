@@ -70,6 +70,7 @@ PODS:
   - GoogleUtilities/UserDefaults (6.6.0):
     - GoogleUtilities/Logger
   - leveldb-library (1.22)
+  - MBCircularProgressBar (0.3.5)
   - nanopb (1.30905.0):
     - nanopb/decode (= 1.30905.0)
     - nanopb/encode (= 1.30905.0)
@@ -81,6 +82,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Core
   - Firebase/Database
+  - MBCircularProgressBar (~> 0.3)
 
 SPEC REPOS:
   trunk:
@@ -97,6 +99,7 @@ SPEC REPOS:
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
     - leveldb-library
+    - MBCircularProgressBar
     - nanopb
     - PromisesObjC
 
@@ -114,9 +117,10 @@ SPEC CHECKSUMS:
   GoogleDataTransportCCTSupport: d70a561f7d236af529fee598835caad5e25f6d3d
   GoogleUtilities: 39530bc0ad980530298e9c4af8549e991fd033b1
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
+  MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
 
-PODFILE CHECKSUM: 6a45905aed4144bc0607b0c291d0dbcd4c775398
+PODFILE CHECKSUM: 991accd5ce953c45ec5da0c666b36030df40bb27
 
 COCOAPODS: 1.9.1

@@ -9,4 +9,5 @@ target 'AlmaDev' do
 pod 'Firebase/Analytics'
 pod 'Firebase/Core'
 pod 'Firebase/Database'
+pod 'MBCircularProgressBar', '~> 0.3'
 end

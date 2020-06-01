@@ -762,6 +762,7 @@
                         <outlet property="nextButton" destination="WDM-nh-uDi" id="GhG-1Y-i4M"/>
                         <outlet property="numberOfQueLabel" destination="AYx-kc-DrO" id="Q3W-cG-CmB"/>
                         <outlet property="progressBar" destination="FOV-Db-7XU" id="r5k-VU-wMr"/>
+                        <outlet property="questionLabel" destination="1oD-pA-jHD" id="7Sk-2j-9Bd"/>
                         <outlet property="scoreLabel" destination="N1O-8f-qns" id="689-9E-cdI"/>
                         <outlet property="secondButton" destination="Gt9-4D-lT2" id="fIL-ph-PZg"/>
                         <outlet property="thirdButton" destination="yeN-3x-aOu" id="OQ4-FT-wLt"/>
@@ -780,31 +781,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Co-ZC-s0x">
-                                <rect key="frame" x="106" y="157" width="127" height="81"/>
+                                <rect key="frame" x="164" y="265" width="127" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSJ-Ut-mlc">
-                                <rect key="frame" x="234" y="436" width="46" height="30"/>
+                                <rect key="frame" x="175" y="436" width="105" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Start"/>
                                 <connections>
                                     <segue destination="Njh-Va-3oi" kind="show" id="VHZ-R1-bRn"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="PYx-Ru-ugo">
+                                <rect key="frame" x="213" y="365" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDR-6u-Noc">
+                                <rect key="frame" x="164" y="393" width="140" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="jk5-MF-31C"/>
                     </view>
                     <connections>
                         <outlet property="categoryLabel" destination="2Co-ZC-s0x" id="kdp-sg-sLf"/>
+                        <outlet property="loadingBar" destination="PYx-Ru-ugo" id="rur-Qo-RdL"/>
+                        <outlet property="loadingLabel" destination="KDR-6u-Noc" id="fRX-RP-EPJ"/>
+                        <outlet property="startButton" destination="uSJ-Ut-mlc" id="5uF-01-1pD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mnx-cE-O5R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3072" y="-691"/>
+            <point key="canvasLocation" x="3071.0144927536235" y="-691.07142857142856"/>
         </scene>
         <!--Category View Controller-->
         <scene sceneID="7u1-PW-RWB">

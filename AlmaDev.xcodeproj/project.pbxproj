@@ -21,6 +21,8 @@
 		988971FF2481514000C5B85A /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988971FE2481514000C5B85A /* Category.swift */; };
 		988972012481514800C5B85A /* NotificationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988972002481514700C5B85A /* NotificationProvider.swift */; };
 		988972062481FB2D00C5B85A /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988972052481FB2D00C5B85A /* CategoryCollectionViewCell.swift */; };
+		9889720824828A5A00C5B85A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889720724828A5900C5B85A /* Question.swift */; };
+		9889720A24828B5A00C5B85A /* QuestionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889720924828B5A00C5B85A /* QuestionProvider.swift */; };
 		C61ED4362480484900889FC9 /* AboutUsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61ED4352480484900889FC9 /* AboutUsDetailViewController.swift */; };
 		C62EEE44247E60E800079209 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62EEE43247E60E800079209 /* SettingsViewController.swift */; };
 		C66768D8247BCEEF007BAF99 /* ScoreBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66768D7247BCEEF007BAF99 /* ScoreBoardViewController.swift */; };
@@ -50,6 +52,8 @@
 		988971FE2481514000C5B85A /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		988972002481514700C5B85A /* NotificationProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationProvider.swift; sourceTree = "<group>"; };
 		988972052481FB2D00C5B85A /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		9889720724828A5900C5B85A /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		9889720924828B5A00C5B85A /* QuestionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionProvider.swift; sourceTree = "<group>"; };
 		C61ED4352480484900889FC9 /* AboutUsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsDetailViewController.swift; sourceTree = "<group>"; };
 		C62EEE43247E60E800079209 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C66768D7247BCEEF007BAF99 /* ScoreBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				C66768DB247BD9E2007BAF99 /* Score.swift */,
 				988971FE2481514000C5B85A /* Category.swift */,
 				C6E4186724803346002CB7B9 /* Person.swift */,
+				9889720724828A5900C5B85A /* Question.swift */,
+				9889720924828B5A00C5B85A /* QuestionProvider.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -284,9 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9889720A24828B5A00C5B85A /* QuestionProvider.swift in Sources */,
 				C61ED4362480484900889FC9 /* AboutUsDetailViewController.swift in Sources */,
 				C6E4186824803346002CB7B9 /* Person.swift in Sources */,
 				C66768D8247BCEEF007BAF99 /* ScoreBoardViewController.swift in Sources */,
+				9889720824828A5A00C5B85A /* Question.swift in Sources */,
 				988972062481FB2D00C5B85A /* CategoryCollectionViewCell.swift in Sources */,
 				988971FD2481512200C5B85A /* LevelViewController.swift in Sources */,
 				C6E4186624803196002CB7B9 /* AboutUsViewController.swift in Sources */,

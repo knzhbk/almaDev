@@ -13,6 +13,7 @@ class TestViewController: UIViewController {
     @IBOutlet weak var secondButton: UIButton!
     @IBOutlet weak var thirdButton: UIButton!
     @IBOutlet weak var fourthButton: UIButton!
+    var question : Question?
     var category = "Geography"
     var diffuculity = 2
     var numberOfQuestions = 5
@@ -25,27 +26,34 @@ class TestViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var numberOfQueLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     func writeQuestion(number : Int){
+        questionLabel.text = question!.results[number].question
         firstButton.setImage(roundImage, for: .normal)
-        firstButton.setTitle("\(number) Questions answer", for: .normal)
+        firstButton.setTitle(question!.results[number].correct_answer ,for: .normal)
         firstButton.backgroundColor = .white
         firstButton.tintColor = .lightGray
         secondButton.setImage(roundImage, for: .normal)
-        secondButton.setTitle("\(number) Questions answer", for: .normal)
+        secondButton.setTitle(question!.results[number].incorrect_answers[0], for: .normal)
         secondButton.backgroundColor = .white
         secondButton.tintColor = .lightGray
         thirdButton.setImage(roundImage, for: .normal)
-        thirdButton.setTitle("\(number) Questions answer", for: .normal)
+        thirdButton.setTitle(question!.results[number].incorrect_answers[1], for: .normal)
         thirdButton.backgroundColor = .white
         fourthButton.setImage(roundImage, for: .normal)
-        fourthButton.setTitle("\(number) Questions answer", for: .normal)
+        fourthButton.setTitle(question!.results[number].incorrect_answers[2], for: .normal)
         fourthButton.backgroundColor = .white
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(showButton), name: NOTIFICATION_QUESTION_SEND2, object: nil)
         firstConfig()
+    }
+    @objc func showButton(notification: Notification) {
+        let getQuestion = notification.object as? Question
+        question = getQuestion
     }
     func firstConfig(){
         roundImage?.size.equalTo(.init(width: 5, height: 5))
@@ -54,7 +62,7 @@ class TestViewController: UIViewController {
         wrongImage?.withTintColor(.white, renderingMode: .automatic)
         title = category
         errorLabel.alpha = 0
-        writeQuestion(number: number)
+      //  writeQuestion(number: number)
         scoreLabel.text = String(score)
         progressBar.setProgress(1.0/Float(numberOfQuestions), animated: false)
         numberOfQueLabel.text = "Question \(number)/\(numberOfQuestions)"
@@ -64,10 +72,9 @@ class TestViewController: UIViewController {
         answered = true
         score += diffuculity
         scoreLabel.text = String(score)
-        
         firstButton.setImage(correctImage, for: .normal)
         secondButton.setImage(correctImage, for: .highlighted)
-        firstButton.setTitle("    \(number) Questions answer", for: .normal)
+        firstButton.setTitle("\(number) Questions answer", for: .normal)
         firstButton.tintColor  = .green
         firstButton.backgroundColor = .orange
         secondButton.backgroundColor = .red

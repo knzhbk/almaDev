@@ -9,7 +9,7 @@
 import UIKit
 
 class CategoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
-    var categoriesArray = ["animals", "art", "computers", "geography", "sport", "music", "films", "nature", "cartoons", "books"]
+    var categoriesArray = [("animals", "27"), ("art", "25") , ("computers", "18"), ("geography", "22"), ("sport", "21"), ("music", "12"), ("films", "11"), ("nature", "17"), ("cartoons", "32"), ("books", "10")]
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -20,8 +20,8 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellCategory", for: indexPath) as! CategoryCollectionViewCell
         
         let cellIndex = indexPath.item
-        cell.categoryName.text = categoriesArray[cellIndex]
-        cell.categoryImage.image = UIImage(named:categoriesArray[cellIndex])
+        cell.categoryName.text = categoriesArray[cellIndex].0
+        cell.categoryImage.image = UIImage(named:categoriesArray[cellIndex].0)
         
         return cell
         
@@ -66,7 +66,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
             let indexPath = CategoryCollectionView.indexPath(for: cell)
         {
             let category = categoriesArray[indexPath.item]
-            destination.category = Category(category: category)
+            destination.category = Category(category: category.1)
         }
         
         

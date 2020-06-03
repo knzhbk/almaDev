@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class TestViewController: UIViewController {
     @IBOutlet weak var firstButton: UIButton!
@@ -20,6 +21,7 @@ class TestViewController: UIViewController {
     var number = 1
     var score = 0
     var answered = false
+    var correctAnswer = "Correct"
     let wrongImage = UIImage(named: "wrong")
     let correctImage = UIImage(named: "correct")
     let roundImage = UIImage(named: "round")
@@ -30,51 +32,61 @@ class TestViewController: UIViewController {
     @IBOutlet weak var numberOfQueLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     func writeQuestion(number : Int){
-        questionLabel.text = question!.results[number].question
+        let ref = Database.database().reference()
+        ref.child("User01").child("\(number-1)").observeSingleEvent(of: .value)
+            { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            let category = value?["category"] as? String ?? ""
+                self.category = category
+            let question = value?["question"] as? String ?? ""
+                self.questionLabel.text = question
+            let correctAnswer = value?["correct_answer"] as? String ?? ""
+                self.firstButton.setTitle(correctAnswer, for: .normal)
+            let inCorrectAnswer0 = value?["incorrect_answers0"] as? String ?? ""
+                self.secondButton.setTitle(inCorrectAnswer0, for: .normal)
+            let inCorrectAnswer1 = value?["incorrect_answers1"] as? String ?? ""
+                self.thirdButton.setTitle(inCorrectAnswer1, for: .normal)
+            let inCorrectAnswer2 = value?["incorrect_answers2"] as? String ?? ""
+                self.fourthButton.setTitle(inCorrectAnswer2, for: .normal)
+            }
+        title = category
         firstButton.setImage(roundImage, for: .normal)
-        firstButton.setTitle(question!.results[number].correct_answer ,for: .normal)
         firstButton.backgroundColor = .white
         firstButton.tintColor = .lightGray
         secondButton.setImage(roundImage, for: .normal)
-        secondButton.setTitle(question!.results[number].incorrect_answers[0], for: .normal)
         secondButton.backgroundColor = .white
         secondButton.tintColor = .lightGray
         thirdButton.setImage(roundImage, for: .normal)
-        thirdButton.setTitle(question!.results[number].incorrect_answers[1], for: .normal)
         thirdButton.backgroundColor = .white
         fourthButton.setImage(roundImage, for: .normal)
-        fourthButton.setTitle(question!.results[number].incorrect_answers[2], for: .normal)
         fourthButton.backgroundColor = .white
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(showButton), name: NOTIFICATION_QUESTION_SEND2, object: nil)
         firstConfig()
+    
+        //NotificationCenter.default.addObserver(self, selector: #selector(showButton), name: NOTIFICATION_QUESTION_SEND2, object: nil)
     }
-    @objc func showButton(notification: Notification) {
+    /*@objc func showButton(notification: Notification) {
         let getQuestion = notification.object as? Question
         question = getQuestion
-    }
+           
+    }*/
     func firstConfig(){
-        roundImage?.size.equalTo(.init(width: 5, height: 5))
-       // correctImage?.withTintColor(.white)
+        writeQuestion(number: number)
         correctImage?.withTintColor(.white, renderingMode: .automatic)
         wrongImage?.withTintColor(.white, renderingMode: .automatic)
-        title = category
         errorLabel.alpha = 0
-      //  writeQuestion(number: number)
         scoreLabel.text = String(score)
         progressBar.setProgress(1.0/Float(numberOfQuestions), animated: false)
         numberOfQueLabel.text = "Question \(number)/\(numberOfQuestions)"
     }
-    
     @IBAction func answersButton(_ sender: Any) {
         answered = true
         score += diffuculity
         scoreLabel.text = String(score)
         firstButton.setImage(correctImage, for: .normal)
         secondButton.setImage(correctImage, for: .highlighted)
-        firstButton.setTitle("\(number) Questions answer", for: .normal)
         firstButton.tintColor  = .green
         firstButton.backgroundColor = .orange
         secondButton.backgroundColor = .red

@@ -22,11 +22,13 @@ class LevelViewController: UIViewController {
         startButton.alpha = 0
         if let category = category{
             categoryLabel.text = category.categoryName
-        }
         questionProvder = QuestionProvider()
-             let questionAddress = "https://opentdb.com/api.php?amount=5&category=22&difficulty=medium&type=multiple"
+      //      let i = Int(category.categoryName!)
+             let questionAddress = "https://opentdb.com/api.php?amount=5&category=18&difficulty=medium&type=multiple"
              questionProvder?.getQuestion(questionAddress: questionAddress)
-            NotificationCenter.default.addObserver(self, selector: #selector(showButton), name: NOTIFICATION_QUESTION_SEND, object: nil)
+        }
+            NotificationCenter.default.addObserver(self, selector: #selector(showButton), name: NOTIFICATION_QUESTION_SEND3, object: nil)
+            
     }
     @objc func showButton(notification: Notification){
         let getQuestion = notification.object as? Question

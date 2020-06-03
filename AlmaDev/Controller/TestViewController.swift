@@ -20,6 +20,7 @@ class TestViewController: UIViewController {
     var numberOfQuestions = 5
     var number = 1
     var score = 0
+    var myScore: Score?
     var answered = false
     var correctAnswer = "Correct"
     let wrongImage = UIImage(named: "wrong")
@@ -31,6 +32,11 @@ class TestViewController: UIViewController {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var numberOfQueLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as? ScoreViewController
+        destination?.score = myScore
+    }
     func writeQuestion(number : Int){
         let ref = Database.database().reference()
         ref.child("User01").child("\(number-1)").observeSingleEvent(of: .value)
@@ -49,7 +55,7 @@ class TestViewController: UIViewController {
             let inCorrectAnswer2 = value?["incorrect_answers2"] as? String ?? ""
                 self.fourthButton.setTitle(inCorrectAnswer2, for: .normal)
             }
-        title = category
+        
         firstButton.setImage(roundImage, for: .normal)
         firstButton.backgroundColor = .white
         firstButton.tintColor = .lightGray
@@ -64,14 +70,8 @@ class TestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         firstConfig()
-    
-        //NotificationCenter.default.addObserver(self, selector: #selector(showButton), name: NOTIFICATION_QUESTION_SEND2, object: nil)
+        title = category
     }
-    /*@objc func showButton(notification: Notification) {
-        let getQuestion = notification.object as? Question
-        question = getQuestion
-           
-    }*/
     func firstConfig(){
         writeQuestion(number: number)
         correctImage?.withTintColor(.white, renderingMode: .automatic)
@@ -95,7 +95,9 @@ class TestViewController: UIViewController {
         
     }
     func Finish(){
-        
+        self.myScore?.score = self.score
+        self.myScore?.subject = self.category
+        performSegue(withIdentifier: "goToScore", sender: Any?.self)
     }
     @IBAction func nextButton(_ sender: Any) {
         if number == numberOfQuestions {

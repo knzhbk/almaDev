@@ -9,6 +9,6 @@
 import Foundation
 
 struct Score {
-    let subject: String
-    let score: Int
+    var subject: String
+    var score: Int
 }

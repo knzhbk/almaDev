@@ -14,94 +14,117 @@ class TestViewController: UIViewController {
     @IBOutlet weak var secondButton: UIButton!
     @IBOutlet weak var thirdButton: UIButton!
     @IBOutlet weak var fourthButton: UIButton!
-    var question : Question?
-    var category = "Geography"
-    var diffuculity = 2
+    var category : Category?
+    var diffuculity = 20
     var numberOfQuestions = 5
     var number = 1
     var score = 0
     var answered = false
-    var correctAnswer = "Correct"
-    let wrongImage = UIImage(named: "wrong")
-    let correctImage = UIImage(named: "correct")
-    let roundImage = UIImage(named: "round")
+    var correctA = 1
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var numberOfQueLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as? ScoreViewController
+        destination?.score = Score(subject: (category?.categoryName)!, score: score)
+    }
     func writeQuestion(number : Int){
+        correctA = Int.random(in: 1...4)
         let ref = Database.database().reference()
         ref.child("User01").child("\(number-1)").observeSingleEvent(of: .value)
             { (snapshot) in
             let value = snapshot.value as? NSDictionary
-            let category = value?["category"] as? String ?? ""
-                self.category = category
             let question = value?["question"] as? String ?? ""
                 self.questionLabel.text = question
-            let correctAnswer = value?["correct_answer"] as? String ?? ""
-                self.firstButton.setTitle(correctAnswer, for: .normal)
-            let inCorrectAnswer0 = value?["incorrect_answers0"] as? String ?? ""
-                self.secondButton.setTitle(inCorrectAnswer0, for: .normal)
-            let inCorrectAnswer1 = value?["incorrect_answers1"] as? String ?? ""
-                self.thirdButton.setTitle(inCorrectAnswer1, for: .normal)
-            let inCorrectAnswer2 = value?["incorrect_answers2"] as? String ?? ""
-                self.fourthButton.setTitle(inCorrectAnswer2, for: .normal)
+                let correctAnswer = value?["correct_answer"] as? String ?? ""
+                let inCorrectAnswer0 = value?["incorrect_answers0"] as? String ?? ""
+                let inCorrectAnswer1 = value?["incorrect_answers1"] as? String ?? ""
+                let inCorrectAnswer2 = value?["incorrect_answers2"] as? String ?? ""
+                         
+                switch self.correctA {
+                case 1: self.firstButton.setTitle(correctAnswer, for: .normal)
+                        self.secondButton.setTitle(inCorrectAnswer0, for: .normal)
+                        self.thirdButton.setTitle(inCorrectAnswer1, for: .normal)
+                        self.fourthButton.setTitle(inCorrectAnswer2, for: .normal)
+                    
+                case 2: self.secondButton.setTitle(correctAnswer, for: .normal)
+                        self.firstButton.setTitle(inCorrectAnswer0, for: .normal)
+                        self.thirdButton.setTitle(inCorrectAnswer1, for: .normal)
+                        self.fourthButton.setTitle(inCorrectAnswer2, for: .normal)
+                    
+                case 3: self.thirdButton.setTitle(correctAnswer, for: .normal)
+                        self.fourthButton.setTitle(inCorrectAnswer0, for: .normal)
+                        self.firstButton.setTitle(inCorrectAnswer1, for: .normal)
+                        self.secondButton.setTitle(inCorrectAnswer2, for: .normal)
+                    
+                case 4: self.fourthButton.setTitle(correctAnswer, for: .normal)
+                        self.firstButton.setTitle(inCorrectAnswer0, for: .normal)
+                        self.secondButton.setTitle(inCorrectAnswer1, for: .normal)
+                        self.thirdButton.setTitle(inCorrectAnswer2, for: .normal)
+                    
+                default:
+                    print("write Correct answer")
+                }
             }
-        title = category
-        firstButton.setImage(roundImage, for: .normal)
-        firstButton.backgroundColor = .white
-        firstButton.tintColor = .lightGray
-        secondButton.setImage(roundImage, for: .normal)
-        secondButton.backgroundColor = .white
-        secondButton.tintColor = .lightGray
-        thirdButton.setImage(roundImage, for: .normal)
-        thirdButton.backgroundColor = .white
-        fourthButton.setImage(roundImage, for: .normal)
-        fourthButton.backgroundColor = .white
+        Utilities.startFilledButton(firstButton)
+        Utilities.startFilledButton(secondButton)
+        Utilities.startFilledButton(thirdButton)
+        Utilities.startFilledButton(fourthButton)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         firstConfig()
-    
-        //NotificationCenter.default.addObserver(self, selector: #selector(showButton), name: NOTIFICATION_QUESTION_SEND2, object: nil)
+        title = category?.categoryName
     }
-    /*@objc func showButton(notification: Notification) {
-        let getQuestion = notification.object as? Question
-        question = getQuestion
-           
-    }*/
     func firstConfig(){
         writeQuestion(number: number)
-        correctImage?.withTintColor(.white, renderingMode: .automatic)
-        wrongImage?.withTintColor(.white, renderingMode: .automatic)
+        Utilities.startButton(nextButton)
         errorLabel.alpha = 0
-        scoreLabel.text = String(score)
         progressBar.setProgress(1.0/Float(numberOfQuestions), animated: false)
         numberOfQueLabel.text = "Question \(number)/\(numberOfQuestions)"
     }
-    @IBAction func answersButton(_ sender: Any) {
-        answered = true
-        score += diffuculity
-        scoreLabel.text = String(score)
-        firstButton.setImage(correctImage, for: .normal)
-        secondButton.setImage(correctImage, for: .highlighted)
-        firstButton.tintColor  = .green
-        firstButton.backgroundColor = .orange
-        secondButton.backgroundColor = .red
-        secondButton.setImage(wrongImage, for: .normal)
-        secondButton.tintColor = .magenta
-        
+    func clickCorrect(number: Int)
+    {
+        switch number {
+        case 1 : Utilities.correctClicked(firstButton)
+        case 2 : Utilities.correctClicked(secondButton)
+        case 3 : Utilities.correctClicked(thirdButton)
+        case 4 : Utilities.correctClicked(fourthButton)
+        default:
+            print("hello")
+        }
     }
-    func Finish(){
-        
+    @IBAction func answersButton(_ sender: UIButton) {
+        answered = true
+        if (sender.tag == correctA){
+            score += diffuculity
+            scoreLabel.text = String(score)
+            clickCorrect(number: correctA)
+        } else {
+            switch sender.tag {
+            case 1 : Utilities.wrongClicked(firstButton)
+                clickCorrect(number: correctA)
+            case 2 : Utilities.wrongClicked(secondButton)
+                clickCorrect(number: correctA)
+            case 3 : Utilities.wrongClicked(thirdButton)
+                clickCorrect(number: correctA)
+            case 4 : Utilities.wrongClicked(fourthButton)
+                clickCorrect(number: correctA)
+            default:
+                print("hello")
+            }
+        }
     }
     @IBAction func nextButton(_ sender: Any) {
-        if number == numberOfQuestions {
-            Finish()
-        }
+      
         if answered {
+            if number == numberOfQuestions {
+                      performSegue(withIdentifier: "goToScore", sender: nil) // Going to score
+                  }
             errorLabel.alpha = 0
             answered = false
             number += 1

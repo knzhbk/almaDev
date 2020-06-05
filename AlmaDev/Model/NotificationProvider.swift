@@ -8,5 +8,4 @@
 
 import Foundation
 let NOTIFICATION_CHOSEN_CELL = NSNotification.Name("notificationSendCategoryCell")
-let NOTIFICATION_QUESTION_SEND3 = NSNotification.Name("notificationSendQuestion3")
-let NOTIFICATION_QUESTION_SEND2 = NSNotification.Name("notificationSendQuestion2")
+let NOTIFICATION_QUESTION_SEND = NSNotification.Name("notificationSendQuestion")

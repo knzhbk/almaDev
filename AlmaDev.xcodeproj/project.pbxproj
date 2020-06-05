@@ -23,6 +23,8 @@
 		988972062481FB2D00C5B85A /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988972052481FB2D00C5B85A /* CategoryCollectionViewCell.swift */; };
 		9889720824828A5A00C5B85A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889720724828A5900C5B85A /* Question.swift */; };
 		9889720A24828B5A00C5B85A /* QuestionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889720924828B5A00C5B85A /* QuestionProvider.swift */; };
+		9889720C2488032400C5B85A /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889720B2488032400C5B85A /* ScoreViewController.swift */; };
+		9889720E2489E4F600C5B85A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889720D2489E4F500C5B85A /* Utilities.swift */; };
 		C61ED4362480484900889FC9 /* AboutUsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61ED4352480484900889FC9 /* AboutUsDetailViewController.swift */; };
 		C62EEE44247E60E800079209 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62EEE43247E60E800079209 /* SettingsViewController.swift */; };
 		C66768D8247BCEEF007BAF99 /* ScoreBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66768D7247BCEEF007BAF99 /* ScoreBoardViewController.swift */; };
@@ -54,6 +56,8 @@
 		988972052481FB2D00C5B85A /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		9889720724828A5900C5B85A /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		9889720924828B5A00C5B85A /* QuestionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionProvider.swift; sourceTree = "<group>"; };
+		9889720B2488032400C5B85A /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		9889720D2489E4F500C5B85A /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		C61ED4352480484900889FC9 /* AboutUsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsDetailViewController.swift; sourceTree = "<group>"; };
 		C62EEE43247E60E800079209 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C66768D7247BCEEF007BAF99 /* ScoreBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 				C6E4186524803196002CB7B9 /* AboutUsViewController.swift */,
 				C61ED4352480484900889FC9 /* AboutUsDetailViewController.swift */,
 				988971F0247EB65500C5B85A /* TestViewController.swift */,
+				9889720B2488032400C5B85A /* ScoreViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 		9854C4A1247D7C51003B44FD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				9889720D2489E4F500C5B85A /* Utilities.swift */,
 				9854C49F247D7C3D003B44FD /* GoogleService-Info.plist */,
 			);
 			path = Helpers;
@@ -297,7 +303,9 @@
 				9889720824828A5A00C5B85A /* Question.swift in Sources */,
 				988972062481FB2D00C5B85A /* CategoryCollectionViewCell.swift in Sources */,
 				988971FD2481512200C5B85A /* LevelViewController.swift in Sources */,
+				9889720C2488032400C5B85A /* ScoreViewController.swift in Sources */,
 				C6E4186624803196002CB7B9 /* AboutUsViewController.swift in Sources */,
+				9889720E2489E4F600C5B85A /* Utilities.swift in Sources */,
 				18FB9F042475B8A4002B46F3 /* ViewController.swift in Sources */,
 				988971F1247EB65500C5B85A /* TestViewController.swift in Sources */,
 				988972012481514800C5B85A /* NotificationProvider.swift in Sources */,

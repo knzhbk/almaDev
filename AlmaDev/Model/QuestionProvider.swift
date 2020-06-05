@@ -27,7 +27,7 @@ class QuestionProvider {
                             ref.child("User01").child("\(i)").setValue(["category": value.category, "question": value.question,"correct_answer": value.correct_answer,"incorrect_answers0": value.incorrect_answers[0],"incorrect_answers1": value.incorrect_answers[1],"incorrect_answers2": value.incorrect_answers[2]])
                             i += 1
                         }
-                        NotificationCenter.default.post(name: NOTIFICATION_QUESTION_SEND3, object: self.question )
+                        NotificationCenter.default.post(name: NOTIFICATION_QUESTION_SEND, object: self.question )
 
                        } catch {
                            print("Decoding JSON failure")

@@ -11,4 +11,8 @@ import Foundation
 struct Score {
     var subject: String
     var score: Int
+   /* init() {
+        subject = "Animalas"
+        score = 0
+    }*/
 }

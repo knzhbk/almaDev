@@ -7,16 +7,27 @@
 //
 
 import UIKit
+import MBCircularProgressBar
 
 class ScoreViewController: UIViewController {
    var  score : Score?
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
+    
+    @IBOutlet weak var progressView: MBCircularProgressBarView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let score = score {
             scoreLabel.text = String(score.score)
             categoryLabel.text = score.subject
+        }
+        self.progressView.value = 0
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 10.0) {
+            self.progressView.value = CGFloat(self.score!.score)
         }
     }
     

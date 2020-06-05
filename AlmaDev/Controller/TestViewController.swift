@@ -14,13 +14,13 @@ class TestViewController: UIViewController {
     @IBOutlet weak var secondButton: UIButton!
     @IBOutlet weak var thirdButton: UIButton!
     @IBOutlet weak var fourthButton: UIButton!
-    var category = "Geography"
-    var diffuculity = 2
+    var category : Category?
+    var diffuculity = 20
     var numberOfQuestions = 5
     var number = 1
     var score = 0
     var answered = false
-    var correctAnswer = "Correct"
+    var correctA = 1
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -30,25 +30,45 @@ class TestViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination as? ScoreViewController
-        destination?.score = Score(subject: category, score: score)
+        destination?.score = Score(subject: (category?.categoryName)!, score: score)
     }
     func writeQuestion(number : Int){
+        correctA = Int.random(in: 1...4)
         let ref = Database.database().reference()
         ref.child("User01").child("\(number-1)").observeSingleEvent(of: .value)
             { (snapshot) in
             let value = snapshot.value as? NSDictionary
-            let category = value?["category"] as? String ?? ""
-                self.category = category
             let question = value?["question"] as? String ?? ""
                 self.questionLabel.text = question
-            let correctAnswer = value?["correct_answer"] as? String ?? ""
-                self.firstButton.setTitle(correctAnswer, for: .normal)
-            let inCorrectAnswer0 = value?["incorrect_answers0"] as? String ?? ""
-                self.secondButton.setTitle(inCorrectAnswer0, for: .normal)
-            let inCorrectAnswer1 = value?["incorrect_answers1"] as? String ?? ""
-                self.thirdButton.setTitle(inCorrectAnswer1, for: .normal)
-            let inCorrectAnswer2 = value?["incorrect_answers2"] as? String ?? ""
-                self.fourthButton.setTitle(inCorrectAnswer2, for: .normal)
+                let correctAnswer = value?["correct_answer"] as? String ?? ""
+                let inCorrectAnswer0 = value?["incorrect_answers0"] as? String ?? ""
+                let inCorrectAnswer1 = value?["incorrect_answers1"] as? String ?? ""
+                let inCorrectAnswer2 = value?["incorrect_answers2"] as? String ?? ""
+                         
+                switch self.correctA {
+                case 1: self.firstButton.setTitle(correctAnswer, for: .normal)
+                        self.secondButton.setTitle(inCorrectAnswer0, for: .normal)
+                        self.thirdButton.setTitle(inCorrectAnswer1, for: .normal)
+                        self.fourthButton.setTitle(inCorrectAnswer2, for: .normal)
+                    
+                case 2: self.secondButton.setTitle(correctAnswer, for: .normal)
+                        self.firstButton.setTitle(inCorrectAnswer0, for: .normal)
+                        self.thirdButton.setTitle(inCorrectAnswer1, for: .normal)
+                        self.fourthButton.setTitle(inCorrectAnswer2, for: .normal)
+                    
+                case 3: self.thirdButton.setTitle(correctAnswer, for: .normal)
+                        self.fourthButton.setTitle(inCorrectAnswer0, for: .normal)
+                        self.firstButton.setTitle(inCorrectAnswer1, for: .normal)
+                        self.secondButton.setTitle(inCorrectAnswer2, for: .normal)
+                    
+                case 4: self.fourthButton.setTitle(correctAnswer, for: .normal)
+                        self.firstButton.setTitle(inCorrectAnswer0, for: .normal)
+                        self.secondButton.setTitle(inCorrectAnswer1, for: .normal)
+                        self.thirdButton.setTitle(inCorrectAnswer2, for: .normal)
+                    
+                default:
+                    print("write Correct answer")
+                }
             }
         Utilities.startFilledButton(firstButton)
         Utilities.startFilledButton(secondButton)
@@ -58,7 +78,7 @@ class TestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         firstConfig()
-        title = category
+        title = category?.categoryName
     }
     func firstConfig(){
         writeQuestion(number: number)
@@ -67,18 +87,33 @@ class TestViewController: UIViewController {
         progressBar.setProgress(1.0/Float(numberOfQuestions), animated: false)
         numberOfQueLabel.text = "Question \(number)/\(numberOfQuestions)"
     }
+    func clickCorrect(number: Int)
+    {
+        switch number {
+        case 1 : Utilities.correctClicked(firstButton)
+        case 2 : Utilities.correctClicked(secondButton)
+        case 3 : Utilities.correctClicked(thirdButton)
+        case 4 : Utilities.correctClicked(fourthButton)
+        default:
+            print("hello")
+        }
+    }
     @IBAction func answersButton(_ sender: UIButton) {
         answered = true
-        if (sender.tag == 1){
+        if (sender.tag == correctA){
             score += diffuculity
             scoreLabel.text = String(score)
-            Utilities.correctClicked(firstButton)
+            clickCorrect(number: correctA)
         } else {
-            Utilities.correctClicked(firstButton)
             switch sender.tag {
+            case 1 : Utilities.wrongClicked(firstButton)
+                clickCorrect(number: correctA)
             case 2 : Utilities.wrongClicked(secondButton)
+                clickCorrect(number: correctA)
             case 3 : Utilities.wrongClicked(thirdButton)
+                clickCorrect(number: correctA)
             case 4 : Utilities.wrongClicked(fourthButton)
+                clickCorrect(number: correctA)
             default:
                 print("hello")
             }
@@ -88,7 +123,7 @@ class TestViewController: UIViewController {
       
         if answered {
             if number == numberOfQuestions {
-                      performSegue(withIdentifier: "goToScore", sender: nil)
+                      performSegue(withIdentifier: "goToScore", sender: nil) // Going to score
                   }
             errorLabel.alpha = 0
             answered = false

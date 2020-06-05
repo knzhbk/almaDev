@@ -17,7 +17,7 @@ class AboutUsViewController: UIViewController, UICollectionViewDataSource, UICol
                imageTitle: "Baglan",
                personFullName: "Baglan Surname",
                personInfo: "Baglan Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
-               telegramLink: "https://t.me/knzhbks",
+               telegramLink: "https://t.me/SByTe1024",
                cvLink: "https://hh.kz",
                phoneNumber: "+777777777"),
         Person(imageName: "female.png",

@@ -5,28 +5,40 @@
 //  Created by Adina Kenzhebekova on 5/25/20.
 //  Copyright © 2020 Apple. All rights reserved.
 //
-
 import UIKit
-
+import Firebase
 class ScoreBoardViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
-        
-    let scores = [
-        Score(subject: "Geography", score: 5),
-        Score(subject: "Math", score: 66),
-        Score(subject: "Music", score: 18),
-        Score(subject: "Films", score: 22)
-    ]
+    var scores: [Score]=[]
     let cellReuseId = "ScoreCell"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getScoresFromFirebase()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         scores.count
+    }
+    
+    func getScoresFromFirebase() {
+        self.scores = []//обнуляем
+        let ref = Database.database().reference()
+        ref.child("User01").child("scores").observeSingleEvent(of: .value)
+            { (snapshot) in
+                let value = snapshot.value as! [String:Int]
+                for (subject, score) in value {
+                 //   self.scores?.append(Score(subject:subject,score: score))
+                    let sco = Score(subject:subject,score: score)
+                    self.scores.append(sco)
+                    }
+                self.tableView.reloadData()
+            }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -44,28 +44,23 @@ class TestViewController: UIViewController {
                 let inCorrectAnswer0 = value?["incorrect_answers0"] as? String ?? ""
                 let inCorrectAnswer1 = value?["incorrect_answers1"] as? String ?? ""
                 let inCorrectAnswer2 = value?["incorrect_answers2"] as? String ?? ""
-                         
                 switch self.correctA {
                 case 1: self.firstButton.setTitle(correctAnswer, for: .normal)
                         self.secondButton.setTitle(inCorrectAnswer0, for: .normal)
                         self.thirdButton.setTitle(inCorrectAnswer1, for: .normal)
                         self.fourthButton.setTitle(inCorrectAnswer2, for: .normal)
-                    
                 case 2: self.secondButton.setTitle(correctAnswer, for: .normal)
                         self.firstButton.setTitle(inCorrectAnswer0, for: .normal)
                         self.thirdButton.setTitle(inCorrectAnswer1, for: .normal)
                         self.fourthButton.setTitle(inCorrectAnswer2, for: .normal)
-                    
                 case 3: self.thirdButton.setTitle(correctAnswer, for: .normal)
                         self.fourthButton.setTitle(inCorrectAnswer0, for: .normal)
                         self.firstButton.setTitle(inCorrectAnswer1, for: .normal)
                         self.secondButton.setTitle(inCorrectAnswer2, for: .normal)
-                    
                 case 4: self.fourthButton.setTitle(correctAnswer, for: .normal)
                         self.firstButton.setTitle(inCorrectAnswer0, for: .normal)
                         self.secondButton.setTitle(inCorrectAnswer1, for: .normal)
                         self.thirdButton.setTitle(inCorrectAnswer2, for: .normal)
-                    
                 default:
                     print("write Correct answer")
                 }

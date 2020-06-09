@@ -32,7 +32,7 @@ class LevelViewController: UIViewController {
              questionProvder?.getQuestion(questionAddress: questionAddress)
         }
     }
-    @objc func showButton(notification: Notification){
+    @objc func showButton(){
         loadingLabel.alpha = 0
         loadingBar.alpha = 0
         startButton.alpha = 1

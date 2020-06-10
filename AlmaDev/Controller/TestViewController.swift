@@ -10,17 +10,12 @@ import UIKit
 import Firebase
 
 class TestViewController: UIViewController {
+    
     @IBOutlet weak var firstButton: UIButton!
     @IBOutlet weak var secondButton: UIButton!
     @IBOutlet weak var thirdButton: UIButton!
     @IBOutlet weak var fourthButton: UIButton!
-    var category : Category?
-    var diffuculity = 20
-    var numberOfQuestions = 5
-    var number = 1
-    var score = 0
-    var answered = false
-    var correctA = 1
+    
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -28,43 +23,68 @@ class TestViewController: UIViewController {
     @IBOutlet weak var numberOfQueLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     
+    var category : Category?
+    var diffuculity = 20
+    var numberOfQuestions = 5
+    var number = 1
+    var score = 0
+    var answered = false
+    var correctA = 1
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination as? ScoreViewController
         destination?.score = Score(subject: (category?.categoryName)!, score: score)
     }
-    func writeQuestion(number : Int){
+    
+    func filter(name: String) -> String {
+        let firstFilter = name.replacingOccurrences(of: "&quot;", with: "", options: .regularExpression, range: nil)
+        let secondFilter = firstFilter.replacingOccurrences(of: "&lsquo", with: "", options: .regularExpression, range: nil)
+        let thirdFilter = secondFilter.replacingOccurrences(of: "&#039;", with: "", options: .regularExpression, range: nil)
+        let fourthFilter = thirdFilter.replacingOccurrences(of: "&ldquo;", with: "", options: .regularExpression, range: nil)
+        let fifthFilter = fourthFilter.replacingOccurrences(of: "&rdquo;", with: "", options: .regularExpression, range: nil)
+        let sixthFilter = fifthFilter.replacingOccurrences(of: "&eacute;", with: "", options: .regularExpression, range: nil)
+        let seventhFilter = sixthFilter.replacingOccurrences(of: "&rsquo;", with: "", options: .regularExpression, range: nil)
+        let eighthFilter = seventhFilter.replacingOccurrences(of: "&sbquo;", with: "", options: .regularExpression, range: nil)
+        let ninthFilter = eighthFilter.replacingOccurrences(of: "&bdquo;", with: "", options: .regularExpression, range: nil)
+        
+        return ninthFilter
+    }
+    
+    func writeQuestion(number : Int) {
         correctA = Int.random(in: 1...4)
         let ref = Database.database().reference()
         ref.child("User01").child("\(number-1)").observeSingleEvent(of: .value)
             { (snapshot) in
             let value = snapshot.value as? NSDictionary
             let question = value?["question"] as? String ?? ""
-                self.questionLabel.text = question
+                 
+                self.questionLabel.text = self.filter(name: question)
+                
                 let correctAnswer = value?["correct_answer"] as? String ?? ""
                 let inCorrectAnswer0 = value?["incorrect_answers0"] as? String ?? ""
                 let inCorrectAnswer1 = value?["incorrect_answers1"] as? String ?? ""
                 let inCorrectAnswer2 = value?["incorrect_answers2"] as? String ?? ""
                          
                 switch self.correctA {
-                case 1: self.firstButton.setTitle(correctAnswer, for: .normal)
-                        self.secondButton.setTitle(inCorrectAnswer0, for: .normal)
-                        self.thirdButton.setTitle(inCorrectAnswer1, for: .normal)
-                        self.fourthButton.setTitle(inCorrectAnswer2, for: .normal)
+                case 1: self.firstButton.setTitle(self.filter(name: correctAnswer), for: .normal)
+                        self.secondButton.setTitle(self.filter(name: inCorrectAnswer0), for: .normal)
+                        self.thirdButton.setTitle(self.filter(name: inCorrectAnswer1), for: .normal)
+                        self.fourthButton.setTitle(self.filter(name: inCorrectAnswer2), for: .normal)
                     
-                case 2: self.secondButton.setTitle(correctAnswer, for: .normal)
-                        self.firstButton.setTitle(inCorrectAnswer0, for: .normal)
-                        self.thirdButton.setTitle(inCorrectAnswer1, for: .normal)
-                        self.fourthButton.setTitle(inCorrectAnswer2, for: .normal)
+                case 2: self.secondButton.setTitle(self.filter(name: inCorrectAnswer0), for: .normal)
+                        self.firstButton.setTitle(self.filter(name: correctAnswer), for: .normal)
+                        self.thirdButton.setTitle(self.filter(name: inCorrectAnswer1), for: .normal)
+                        self.fourthButton.setTitle(self.filter(name: inCorrectAnswer2), for: .normal)
                     
-                case 3: self.thirdButton.setTitle(correctAnswer, for: .normal)
-                        self.fourthButton.setTitle(inCorrectAnswer0, for: .normal)
-                        self.firstButton.setTitle(inCorrectAnswer1, for: .normal)
-                        self.secondButton.setTitle(inCorrectAnswer2, for: .normal)
+                case 3: self.thirdButton.setTitle(self.filter(name: inCorrectAnswer1), for: .normal)
+                        self.fourthButton.setTitle(self.filter(name: inCorrectAnswer2), for: .normal)
+                        self.firstButton.setTitle(self.filter(name: correctAnswer), for: .normal)
+                        self.secondButton.setTitle(self.filter(name: inCorrectAnswer0), for: .normal)
                     
-                case 4: self.fourthButton.setTitle(correctAnswer, for: .normal)
-                        self.firstButton.setTitle(inCorrectAnswer0, for: .normal)
-                        self.secondButton.setTitle(inCorrectAnswer1, for: .normal)
-                        self.thirdButton.setTitle(inCorrectAnswer2, for: .normal)
+                case 4: self.fourthButton.setTitle(self.filter(name: inCorrectAnswer2), for: .normal)
+                        self.firstButton.setTitle(self.filter(name: correctAnswer), for: .normal)
+                        self.secondButton.setTitle(self.filter(name: inCorrectAnswer0), for: .normal)
+                        self.thirdButton.setTitle(self.filter(name: inCorrectAnswer1), for: .normal)
                     
                 default:
                     print("write Correct answer")

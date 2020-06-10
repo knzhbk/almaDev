@@ -16,7 +16,7 @@ class TestViewController: UIViewController {
     @IBOutlet weak var fourthButton: UIButton!
     var category : Category?
     var diffuculity = 20
-    var numberOfQuestions = 5
+    var numberOfQuestions = 10
     var number = 1
     var score = 0
     var answered = false

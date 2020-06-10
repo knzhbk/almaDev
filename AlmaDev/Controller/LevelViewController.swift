@@ -28,7 +28,7 @@ class LevelViewController: UIViewController {
             categoryLabel.text = cat
         questionProvder = QuestionProvider()
            let i = category.categoryName!
-             let questionAddress = "https://opentdb.com/api.php?amount=5&category=\(i)&difficulty=medium&type=multiple"
+             let questionAddress = "https://opentdb.com/api.php?amount=10&category=\(i)&difficulty=medium&type=multiple"
              questionProvder?.getQuestion(questionAddress: questionAddress)
         }
     }

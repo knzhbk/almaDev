@@ -82,8 +82,22 @@ class TestViewController: UIViewController {
         progressBar.setProgress(1.0/Float(numberOfQuestions), animated: false)
         numberOfQueLabel.text = "Question \(number)/\(numberOfQuestions)"
     }
-    func clickCorrect(number: Int)
-    {
+    
+    func disableAllButtons() {
+        firstButton.isEnabled = false
+        secondButton.isEnabled = false
+        thirdButton.isEnabled = false
+        fourthButton.isEnabled = false
+    }
+    
+    func enableAllButtons() {
+        firstButton.isEnabled = true
+        secondButton.isEnabled = true
+        thirdButton.isEnabled = true
+        fourthButton.isEnabled = true
+    }
+    
+    func clickCorrect(number: Int) {
         switch number {
         case 1 : Utilities.correctClicked(firstButton)
         case 2 : Utilities.correctClicked(secondButton)
@@ -92,6 +106,7 @@ class TestViewController: UIViewController {
         default:
             print("hello")
         }
+        disableAllButtons()
     }
     @IBAction func answersButton(_ sender: UIButton) {
         answered = true
@@ -120,6 +135,7 @@ class TestViewController: UIViewController {
             if number == numberOfQuestions {
                       performSegue(withIdentifier: "goToScore", sender: nil) // Going to score
                   }
+            enableAllButtons()
             errorLabel.alpha = 0
             answered = false
             number += 1

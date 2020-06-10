@@ -191,7 +191,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BVB-1L-0Ep">
-                                <rect key="frame" x="30" y="348" width="150" height="50"/>
+                                <rect key="frame" x="174" y="362.5" width="150" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A04-AB-pk3">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
@@ -237,11 +237,8 @@
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wP-b8-U8L">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="0.0"/>
                                         <color key="backgroundColor" red="0.1764705882" green="0.22352941179999999" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="MDg-Mc-oRP"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
                                         <state key="normal" title="Hard">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -252,93 +249,39 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XTe-91-VRY">
-                                <rect key="frame" x="234" y="348" width="150" height="50"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLX-gq-b6b">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
-                                        <color key="backgroundColor" red="0.20000000000000001" green="0.63529411759999999" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="Bvu-N0-Ks5"/>
-                                            <constraint firstAttribute="width" constant="150" id="hOj-aL-gQp"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                        <state key="normal" title="Select language">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="languageSelectionHandle:" destination="OTk-jq-dBk" eventType="touchUpInside" id="Sdg-fQ-LqJ"/>
-                                        </connections>
-                                    </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lep-M8-Vqm">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
-                                        <color key="backgroundColor" red="0.1764705882" green="0.22352941179999999" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="LnC-Pb-Cvj"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="English">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="languageTapped:" destination="OTk-jq-dBk" eventType="touchUpInside" id="XeH-ym-e42"/>
-                                        </connections>
-                                    </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofH-Bl-0FG">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
-                                        <color key="backgroundColor" red="0.1764705882" green="0.22352941179999999" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="9Dj-Lo-JCw"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="Russian">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="languageTapped:" destination="OTk-jq-dBk" eventType="touchUpInside" id="RPA-hF-1sH"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H94-Wf-Gs8">
-                                <rect key="frame" x="72.5" y="288" width="65.5" height="33.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                <rect key="frame" x="30" y="368" width="75" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMQ-dW-742">
-                                <rect key="frame" x="251.5" y="288" width="115" height="31.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="footer" translatesAutoresizingMaskIntoConstraints="NO" id="7KE-pM-zjG">
+                                <rect key="frame" x="0.0" y="683" width="414" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="AMI-UG-zKk"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.26274509800000001" green="0.1333333333" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="FFw-h8-coR" firstAttribute="trailing" secondItem="YJw-rE-b3b" secondAttribute="trailing" constant="30" id="1NF-cQ-DOK"/>
+                            <constraint firstItem="7KE-pM-zjG" firstAttribute="bottom" secondItem="FFw-h8-coR" secondAttribute="bottom" id="5kV-Qp-g4c"/>
                             <constraint firstItem="YJw-rE-b3b" firstAttribute="top" secondItem="FFw-h8-coR" secondAttribute="top" constant="30" id="86P-B4-TIZ"/>
                             <constraint firstItem="YJw-rE-b3b" firstAttribute="leading" secondItem="FFw-h8-coR" secondAttribute="leading" constant="30" id="ACX-87-0hk"/>
-                            <constraint firstItem="XTe-91-VRY" firstAttribute="top" secondItem="YJw-rE-b3b" secondAttribute="bottom" constant="100" id="BLK-4u-rDm"/>
-                            <constraint firstItem="FFw-h8-coR" firstAttribute="trailing" secondItem="XTe-91-VRY" secondAttribute="trailing" constant="30" id="Lou-9Z-W3R"/>
-                            <constraint firstItem="1wP-b8-U8L" firstAttribute="leading" secondItem="FFw-h8-coR" secondAttribute="leading" constant="30" id="Sgt-3e-hgJ"/>
-                            <constraint firstItem="BMQ-dW-742" firstAttribute="top" secondItem="6ZO-BC-dXz" secondAttribute="bottom" constant="40" id="eiR-Wc-Sei"/>
-                            <constraint firstItem="BMQ-dW-742" firstAttribute="centerX" secondItem="ofH-Bl-0FG" secondAttribute="centerX" id="ek8-yL-Q1e"/>
-                            <constraint firstItem="1wP-b8-U8L" firstAttribute="leading" secondItem="6ZO-BC-dXz" secondAttribute="leading" id="kaR-sO-kuy"/>
-                            <constraint firstItem="XTe-91-VRY" firstAttribute="trailing" secondItem="6ZO-BC-dXz" secondAttribute="trailing" id="kpg-ds-Ojk"/>
-                            <constraint firstItem="H94-Wf-Gs8" firstAttribute="top" secondItem="6ZO-BC-dXz" secondAttribute="bottom" constant="40" id="lap-kQ-9fg"/>
-                            <constraint firstItem="XTe-91-VRY" firstAttribute="top" secondItem="BVB-1L-0Ep" secondAttribute="top" id="lia-Ip-uro"/>
-                            <constraint firstItem="H94-Wf-Gs8" firstAttribute="centerX" secondItem="1wP-b8-U8L" secondAttribute="centerX" id="yXb-nf-DF4"/>
+                            <constraint firstItem="H94-Wf-Gs8" firstAttribute="leading" secondItem="FFw-h8-coR" secondAttribute="leading" constant="30" id="GTl-MZ-wtw"/>
+                            <constraint firstItem="H94-Wf-Gs8" firstAttribute="top" secondItem="YJw-rE-b3b" secondAttribute="bottom" constant="120" id="cs8-fa-2AV"/>
+                            <constraint firstItem="BVB-1L-0Ep" firstAttribute="centerY" secondItem="H94-Wf-Gs8" secondAttribute="centerY" id="iDw-7k-dSb"/>
+                            <constraint firstItem="7KE-pM-zjG" firstAttribute="trailing" secondItem="FFw-h8-coR" secondAttribute="trailing" id="jSt-x7-KNM"/>
+                            <constraint firstItem="BVB-1L-0Ep" firstAttribute="leading" secondItem="H94-Wf-Gs8" secondAttribute="trailing" constant="69" id="xnk-gY-wSl"/>
+                            <constraint firstItem="7KE-pM-zjG" firstAttribute="leading" secondItem="FFw-h8-coR" secondAttribute="leading" id="yp9-Rf-53L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FFw-h8-coR"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="3u2-z5-iew"/>
                     <connections>
                         <outlet property="easyLevelButton" destination="jZD-aA-gEX" id="vnZ-yI-QFN"/>
-                        <outlet property="englishLanguageButton" destination="lep-M8-Vqm" id="i2i-XO-ZPo"/>
                         <outlet property="hardLevelButton" destination="1wP-b8-U8L" id="aI5-VA-KyN"/>
                         <outlet property="mediumLevelButton" destination="6ml-zA-gZc" id="XR8-IH-EyG"/>
-                        <outlet property="russianLangugageButton" destination="ofH-Bl-0FG" id="Zox-Tk-dQx"/>
-                        <outlet property="selectLanguageButton" destination="xLX-gq-b6b" id="Wyh-Qb-YmB"/>
                         <outlet property="selectLevelButton" destination="A04-AB-pk3" id="n5a-Gi-Ti2"/>
                     </connections>
                 </viewController>

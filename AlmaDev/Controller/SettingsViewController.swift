@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var easyLevelButton: UIButton!
@@ -22,10 +23,16 @@ class SettingsViewController: UIViewController {
     var languageUserDefaults = UserDefaults.standard.string(forKey: "Language")
     var levelUserDefaults = UserDefaults.standard.string(forKey: "Level")
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setSelectLanguageButtonTitle()
         setSelectLevelButtonTitle()
+        
+        NotificationCenter.default.post(name: NOTIFICATION_SETTING_LEVEL, object: self.levelUserDefaults)
+        
+        
+       
     }
     
     func setSelectLanguageButtonTitle() {
@@ -41,6 +48,7 @@ class SettingsViewController: UIViewController {
         if levelUserDefaults != nil {
             let level = Levels(rawValue: levelUserDefaults!)
             selectLevelButton.setTitle(level?.rawValue, for: .normal)
+           
         }
     }
 
@@ -92,13 +100,30 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func levelTapped(_ sender: UIButton) {
-        guard let title = sender.currentTitle, let level = Levels(rawValue: title) else {
+        guard let title = sender.currentTitle,
+            let level = Levels(rawValue: title) else {
             return
         }
         
+        
+        
         levelUserDefaults = level.rawValue
+        
         UserDefaults.standard.set(levelUserDefaults, forKey: "Level")
         selectLevelButton.setTitle(levelUserDefaults, for: .normal)
         presentLevels()
+        
+        NotificationCenter.default.post(name: NOTIFICATION_SETTING_LEVEL, object: self.levelUserDefaults)
+        
+        
+        
+       
+        
+
+        
+        
+        
     }
 }
+
+

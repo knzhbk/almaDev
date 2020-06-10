@@ -11,8 +11,11 @@ import Foundation
 struct Category
 {
     var categoryName: String?
+    var categoryNum: String?
     
-    init(category: String) {
-        categoryName = category
+    init(categoryName: String, categoryNum: String) {
+        
+        self.categoryName = categoryName
+        self.categoryNum = categoryNum
     }
 }

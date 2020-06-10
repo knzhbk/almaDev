@@ -9,27 +9,64 @@
 import UIKit
 
 class LevelViewController: UIViewController {
+
     
+    @IBOutlet var levelLabel: UILabel!
     @IBOutlet weak var loadingBar: UIActivityIndicatorView!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var loadingLabel: UILabel!
+    
+    var level = "Easy"
     var category: Category?
+    var questionAddress = ""
     var cat: String = ""
-    var questionProvder: QuestionProvider?
-    var categoriesArray = ["27": "Animals", "25":"Art" , "18":"Computers", "22":"Geography", "21": "Sport", "12":"Music", "11":"Films", "17":"Nature", "32":"Cartoons", "10":"Books"]
-    @IBOutlet weak var categoryLabel: UILabel!
+    var questionProvider: QuestionProvider?
+    
+    var levelChanged = false
+
+
+    @IBOutlet weak var categoryLabel: UILabel!    
     override func viewDidLoad() {
         super.viewDidLoad()
+        levelLabel.text = level
         startButton.alpha = 0
         Utilities.startButton(startButton)
-        NotificationCenter.default.addObserver(self, selector: #selector(showButton), name: NOTIFICATION_QUESTION_SEND, object: nil)
-        if let category = category{
-            cat = categoriesArray[category.categoryName!]!
-            categoryLabel.text = cat
-        questionProvder = QuestionProvider()
-           let i = category.categoryName!
-             let questionAddress = "https://opentdb.com/api.php?amount=5&category=\(i)&difficulty=medium&type=multiple"
-             questionProvder?.getQuestion(questionAddress: questionAddress)
+        
+    
+        NotificationCenter.default.addObserver(self, selector: #selector(settingLevel), name: NOTIFICATION_SETTING_LEVEL, object: nil)
+        
+        
+        if levelChanged == false
+        {
+            loadQuestions()
+        }
+
+        }
+    
+    func loadQuestions()
+    {
+        if let category = category {
+            categoryLabel.text = category.categoryName
+
+                 NotificationCenter.default.addObserver(self, selector: #selector(showButton), name: NOTIFICATION_QUESTION_SEND, object: nil)
+        
+            questionProvider = QuestionProvider()
+        questionAddress = "https://opentdb.com/api.php?amount=5&category=\(category.categoryNum!)&difficulty=\(level.lowercased())&type=multiple"
+                       questionProvider?.getQuestion(questionAddress: questionAddress)
+            
+        }
+    }
+    @objc func settingLevel(notification: Notification){
+        if let setLevel = notification.object as?  String
+        {
+            levelChanged = true
+            
+            level = setLevel
+            levelLabel.text = level
+            loadQuestions()
+            
+            
+            
         }
     }
     @objc func showButton(){
@@ -37,8 +74,13 @@ class LevelViewController: UIViewController {
         loadingBar.alpha = 0
         startButton.alpha = 1
          }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination as? TestViewController
-        destination!.category = Category(category: cat)
+        destination!.category = category
+        print("LEVEL \(levelChanged)")
+        print("INFO: \(questionAddress)")
     }
 }
+

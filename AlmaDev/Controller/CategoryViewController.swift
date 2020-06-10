@@ -44,7 +44,8 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
             let indexPath = CategoryCollectionView.indexPath(for: cell)
         {
             let category = categoriesArray[indexPath.item]
-            destination.category = Category(category: category.1)
+            destination.category = Category(categoryName: category.0, categoryNum: category.1)
+            
         }
     }
 }

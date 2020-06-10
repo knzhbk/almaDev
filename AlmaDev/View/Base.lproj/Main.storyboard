@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="osO-cG-IaZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="osO-cG-IaZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -797,7 +797,7 @@
             <objects>
                 <viewController id="i62-gP-E8y" customClass="ScoreViewController" customModule="AlmaDev" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g9h-el-FOn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwQ-JJ-uxA">
@@ -928,8 +928,8 @@ Questions:</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3K0-b2-9HD">
-                                <rect key="frame" x="264.5" y="159.5" width="71" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3K0-b2-9HD">
+                                <rect key="frame" x="265" y="160" width="102" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -990,6 +990,7 @@ Questions:</string>
                     <navigationItem key="navigationItem" id="tFI-Bd-hBM"/>
                     <connections>
                         <outlet property="categoryLabel" destination="2Co-ZC-s0x" id="kdp-sg-sLf"/>
+                        <outlet property="levelLabel" destination="3K0-b2-9HD" id="eWt-oK-g98"/>
                         <outlet property="loadingBar" destination="PYx-Ru-ugo" id="rur-Qo-RdL"/>
                         <outlet property="loadingLabel" destination="KDR-6u-Noc" id="fRX-RP-EPJ"/>
                         <outlet property="startButton" destination="uSJ-Ut-mlc" id="5uF-01-1pD"/>
@@ -1084,9 +1085,6 @@ Questions:</string>
             <point key="canvasLocation" x="2016" y="-691"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="I2n-fa-5Kk"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Party" width="30" height="30"/>
         <image name="achievments" width="30" height="30"/>
@@ -1097,4 +1095,8 @@ Questions:</string>
         <image name="telegram" width="256" height="256"/>
         <image name="whatsapp" width="256" height="256"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="VHZ-R1-bRn"/>
+        <segue reference="I2n-fa-5Kk"/>
+    </inferredMetricsTieBreakers>
 </document>

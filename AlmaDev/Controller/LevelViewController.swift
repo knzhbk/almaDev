@@ -28,7 +28,7 @@ class LevelViewController: UIViewController {
     @IBOutlet weak var categoryLabel: UILabel!    
     override func viewDidLoad() {
         super.viewDidLoad()
-        levelLabel.text = level
+        levelLabel.text = UserDefaults.standard.string(forKey: "Level")
         startButton.alpha = 0
         Utilities.startButton(startButton)
         

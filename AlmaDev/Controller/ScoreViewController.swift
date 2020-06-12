@@ -30,6 +30,10 @@ class ScoreViewController: UIViewController {
         self.progressView.value = 0
     }
     
+    @IBAction func restartButtonTapped(_ sender: UIButton) {
+        self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
+    }
+    
     func uploadScoreToFirebase(score:Score) {
         let ref = Database.database().reference()
         ref.child("User01").child("scores").child("\(score.subject)").setValue(score.score)
@@ -39,16 +43,4 @@ class ScoreViewController: UIViewController {
             self.progressView.value = CGFloat(self.score!.score)
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

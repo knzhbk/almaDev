@@ -37,7 +37,7 @@
 
 /* Begin PBXFileReference section */
 		04F559CD8C98CB4E27F12090 /* Pods-AlmaDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlmaDev.release.xcconfig"; path = "Target Support Files/Pods-AlmaDev/Pods-AlmaDev.release.xcconfig"; sourceTree = "<group>"; };
-		18FB9EFC2475B8A4002B46F3 /* AlmaDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlmaDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18FB9EFC2475B8A4002B46F3 /* Quizzy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizzy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FB9EFF2475B8A4002B46F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18FB9F012475B8A4002B46F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		18FB9F032475B8A4002B46F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		18FB9EFD2475B8A4002B46F3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				18FB9EFC2475B8A4002B46F3 /* AlmaDev.app */,
+				18FB9EFC2475B8A4002B46F3 /* Quizzy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,7 +199,7 @@
 			);
 			name = AlmaDev;
 			productName = AlmaDev;
-			productReference = 18FB9EFC2475B8A4002B46F3 /* AlmaDev.app */;
+			productReference = 18FB9EFC2475B8A4002B46F3 /* Quizzy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -469,7 +469,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "hello-world.AlmaDev";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Quizzy;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -488,7 +488,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "hello-world.AlmaDev";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Quizzy;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

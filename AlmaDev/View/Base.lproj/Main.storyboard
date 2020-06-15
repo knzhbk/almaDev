@@ -11,7 +11,7 @@
         <!--Score Board View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ScoreBoardViewController" customModule="AlmaDev" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ScoreBoardViewController" customModule="Quizzy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,7 +32,7 @@
                                 <rect key="frame" x="1" y="466" width="413" height="422"/>
                                 <color key="backgroundColor" red="0.26274509800000001" green="0.1333333333" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ScoreCell" rowHeight="109" id="7aj-Va-z8C" customClass="ScoreCell" customModule="AlmaDev" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ScoreCell" rowHeight="109" id="7aj-Va-z8C" customClass="ScoreCell" customModule="Quizzy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="413" height="109"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7aj-Va-z8C" id="nqG-A7-eMJ">
@@ -158,7 +158,7 @@
         <!--Settings-->
         <scene sceneID="SP5-QI-NzP">
             <objects>
-                <viewController id="OTk-jq-dBk" customClass="SettingsViewController" customModule="AlmaDev" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OTk-jq-dBk" customClass="SettingsViewController" customModule="Quizzy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rfM-ip-BGM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -317,7 +317,7 @@
         <!--Info About us-->
         <scene sceneID="HEV-cU-7cX">
             <objects>
-                <viewController id="pwR-yC-kqi" customClass="AboutUsViewController" customModule="AlmaDev" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pwR-yC-kqi" customClass="AboutUsViewController" customModule="Quizzy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NqR-Ze-6Zo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -339,7 +339,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AboutUsCell" id="DU5-ny-gRX" customClass="AboutUsCollectionViewCell" customModule="AlmaDev" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AboutUsCell" id="DU5-ny-gRX" customClass="AboutUsCollectionViewCell" customModule="Quizzy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="191" height="170"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yL4-7N-D2V">
@@ -402,7 +402,7 @@
         <!--About Us Detail View Controller-->
         <scene sceneID="9rR-jo-Xw2">
             <objects>
-                <viewController id="xDF-lL-qhH" customClass="AboutUsDetailViewController" customModule="AlmaDev" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xDF-lL-qhH" customClass="AboutUsDetailViewController" customModule="Quizzy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2WT-Bx-FwD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -551,7 +551,7 @@
         <!--Category-->
         <scene sceneID="AF2-DZ-HzS">
             <objects>
-                <viewController id="Njh-Va-3oi" customClass="TestViewController" customModule="AlmaDev" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Njh-Va-3oi" customClass="TestViewController" customModule="Quizzy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rOh-yD-zPK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -741,7 +741,7 @@
         <!--Score View Controller-->
         <scene sceneID="Q7E-uZ-O45">
             <objects>
-                <viewController id="i62-gP-E8y" customClass="ScoreViewController" customModule="AlmaDev" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="i62-gP-E8y" customClass="ScoreViewController" customModule="Quizzy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g9h-el-FOn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -833,7 +833,7 @@
         <!--Level View Controller-->
         <scene sceneID="T7A-Gl-kqi">
             <objects>
-                <viewController id="iac-fx-D1L" customClass="LevelViewController" customModule="AlmaDev" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iac-fx-D1L" customClass="LevelViewController" customModule="Quizzy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wla-hq-T3J">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -936,6 +936,7 @@ Questions:</string>
                     <navigationItem key="navigationItem" id="tFI-Bd-hBM"/>
                     <connections>
                         <outlet property="categoryLabel" destination="2Co-ZC-s0x" id="kdp-sg-sLf"/>
+                        <outlet property="levelLabel" destination="3K0-b2-9HD" id="xU8-8Z-SVx"/>
                         <outlet property="loadingBar" destination="PYx-Ru-ugo" id="rur-Qo-RdL"/>
                         <outlet property="loadingLabel" destination="KDR-6u-Noc" id="fRX-RP-EPJ"/>
                         <outlet property="startButton" destination="uSJ-Ut-mlc" id="5uF-01-1pD"/>
@@ -948,7 +949,7 @@ Questions:</string>
         <!--Select category-->
         <scene sceneID="7u1-PW-RWB">
             <objects>
-                <viewController id="Fbs-rq-vGm" customClass="CategoryViewController" customModule="AlmaDev" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Fbs-rq-vGm" customClass="CategoryViewController" customModule="Quizzy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oml-j9-STv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -963,7 +964,7 @@ Questions:</string>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="cellCategory" id="kg9-Ec-Hiy" customClass="CategoryCollectionViewCell" customModule="AlmaDev" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="cellCategory" id="kg9-Ec-Hiy" customClass="CategoryCollectionViewCell" customModule="Quizzy" customModuleProvider="target">
                                         <rect key="frame" x="41.5" y="0.0" width="331" height="279"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="IWX-6l-LJX">

@@ -20,6 +20,8 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setSelectLevelButtonTitle()
+        
+        NotificationCenter.default.post(name: NOTIFICATION_SETTING_LEVEL, object: self.levelUserDefaults)
     }
     
     func setSelectLevelButtonTitle() {
@@ -50,7 +52,8 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func levelTapped(_ sender: UIButton) {
-        guard let title = sender.currentTitle, let level = Levels(rawValue: title) else {
+        guard let title = sender.currentTitle,
+            let level = Levels(rawValue: title) else {
             return
         }
         
@@ -58,5 +61,7 @@ class SettingsViewController: UIViewController {
         UserDefaults.standard.set(levelUserDefaults, forKey: "Level")
         selectLevelButton.setTitle(levelUserDefaults, for: .normal)
         presentLevels()
+        
+        NotificationCenter.default.post(name: NOTIFICATION_SETTING_LEVEL, object: self.levelUserDefaults)
     }
 }

@@ -10,7 +10,6 @@
 		088A7D3FA4858B48B060E549 /* Pods_AlmaDev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F2F645503C9684513FCE34E /* Pods_AlmaDev.framework */; };
 		18FB9F002475B8A4002B46F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB9EFF2475B8A4002B46F3 /* AppDelegate.swift */; };
 		18FB9F022475B8A4002B46F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB9F012475B8A4002B46F3 /* SceneDelegate.swift */; };
-		18FB9F042475B8A4002B46F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB9F032475B8A4002B46F3 /* ViewController.swift */; };
 		18FB9F072475B8A4002B46F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FB9F052475B8A4002B46F3 /* Main.storyboard */; };
 		18FB9F092475B8A4002B46F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18FB9F082475B8A4002B46F3 /* Assets.xcassets */; };
 		18FB9F0C2475B8A4002B46F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FB9F0A2475B8A4002B46F3 /* LaunchScreen.storyboard */; };
@@ -40,7 +39,6 @@
 		18FB9EFC2475B8A4002B46F3 /* Quizzy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizzy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FB9EFF2475B8A4002B46F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18FB9F012475B8A4002B46F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		18FB9F032475B8A4002B46F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		18FB9F062475B8A4002B46F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18FB9F082475B8A4002B46F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18FB9F0B2475B8A4002B46F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -143,7 +141,6 @@
 			children = (
 				988971FC2481512200C5B85A /* LevelViewController.swift */,
 				988971FA2481511A00C5B85A /* CategoryViewController.swift */,
-				18FB9F032475B8A4002B46F3 /* ViewController.swift */,
 				C66768D7247BCEEF007BAF99 /* ScoreBoardViewController.swift */,
 				C62EEE43247E60E800079209 /* SettingsViewController.swift */,
 				C6E4186524803196002CB7B9 /* AboutUsViewController.swift */,
@@ -306,7 +303,6 @@
 				9889720C2488032400C5B85A /* ScoreViewController.swift in Sources */,
 				C6E4186624803196002CB7B9 /* AboutUsViewController.swift in Sources */,
 				9889720E2489E4F600C5B85A /* Utilities.swift in Sources */,
-				18FB9F042475B8A4002B46F3 /* ViewController.swift in Sources */,
 				988971F1247EB65500C5B85A /* TestViewController.swift in Sources */,
 				988972012481514800C5B85A /* NotificationProvider.swift in Sources */,
 				C62EEE44247E60E800079209 /* SettingsViewController.swift in Sources */,

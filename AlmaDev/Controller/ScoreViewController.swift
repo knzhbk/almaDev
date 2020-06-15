@@ -20,6 +20,7 @@ class ScoreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.setHidesBackButton(true, animated: true);
         Utilities.startButton(restartTest)
         if let score = score {
             scoreLabel.text = String(score.score)
@@ -31,7 +32,7 @@ class ScoreViewController: UIViewController {
     }
     
     @IBAction func restartButtonTapped(_ sender: UIButton) {
-        self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     func uploadScoreToFirebase(score:Score) {

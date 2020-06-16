@@ -43,7 +43,7 @@ class LevelViewController: UIViewController {
             NotificationCenter.default.addObserver(self, selector: #selector(showButton), name: NOTIFICATION_QUESTION_SEND, object: nil)
             
             questionProvider = QuestionProvider()
-            questionAddress = "https://opentdb.com/api.php?amount=5&category=\(category.categoryNum!)&difficulty=\(level.lowercased())&type=multiple"
+            questionAddress = "https://opentdb.com/api.php?amount=10&category=\(category.categoryNum!)&difficulty=\(level.lowercased())&type=multiple"
             questionProvider?.getQuestion(questionAddress: questionAddress)
         }
     }

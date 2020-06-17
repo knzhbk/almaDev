@@ -24,7 +24,7 @@ class TestViewController: UIViewController {
     @IBOutlet weak var progressBar: UIProgressView!
     
     var category : Category?
-    var diffuculity = 20
+    var diffuculity = 0
     var numberOfQuestions = 10
     var number = 1
     var score = 0
@@ -134,6 +134,7 @@ class TestViewController: UIViewController {
     @IBAction func answersButton(_ sender: UIButton) {
         answered = true
         if (sender.tag == correctA){
+            diffuculity = getDifficulty()
             score += diffuculity
             scoreLabel.text = String(score)
             clickCorrect(number: correctA)
@@ -152,6 +153,20 @@ class TestViewController: UIViewController {
             }
         }
     }
+    
+    func getDifficulty() -> Int {
+        var difficulty = 0
+        let level = UserDefaults.standard.string(forKey: "Level")
+        if level == "Easy" {
+            difficulty = 10
+        } else if level == "Medium" {
+            difficulty = 20
+        } else {
+            difficulty = 30
+        }
+        return difficulty
+    }
+
     @IBAction func nextButton(_ sender: Any) {
       
         if answered {

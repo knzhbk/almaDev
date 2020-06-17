@@ -14,5 +14,4 @@ struct Person {
     let personInfo: String
     let telegramLink: String
     let cvLink: String
-    let phoneNumber: String
 }

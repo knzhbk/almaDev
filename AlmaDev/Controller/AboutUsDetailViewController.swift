@@ -9,7 +9,7 @@
 import UIKit
 
 class AboutUsDetailViewController: UIViewController {
-   
+    
     @IBOutlet weak var personImageView: UIImageView!
     @IBOutlet weak var personNameLabel: UILabel!
     @IBOutlet weak var personInfoTextView: UITextView!
@@ -35,7 +35,17 @@ class AboutUsDetailViewController: UIViewController {
             resumeAttributedString.addAttribute(.link, value: person.cvLink, range: NSRange(location: 0, length: 6))
             resumeTextView.attributedText = resumeAttributedString
             resumeTextView.font = .systemFont(ofSize: 22)
+            
+            roundUpImageView()
         }
+    }
+    
+    func roundUpImageView() {
+        personImageView.layer.borderWidth = 1
+        personImageView.layer.masksToBounds = false
+        personImageView.layer.borderColor = #colorLiteral(red: 0.5942665339, green: 0.5330229402, blue: 0.6821249723, alpha: 1)
+        personImageView.layer.cornerRadius = personImageView.frame.height/2.5
+        personImageView.clipsToBounds = true
     }
     
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {

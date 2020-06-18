@@ -16,8 +16,12 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellCategory", for: indexPath) as! CategoryCollectionViewCell
         let cellIndex = indexPath.item
+        cell.layer.cornerRadius = 6
         cell.categoryName.text = categoriesArray[cellIndex].0
         cell.categoryImage.image = UIImage(named:categoriesArray[cellIndex].0)
+        
+        cell.categoryImage.image = cell.categoryImage.image?.withRenderingMode(.alwaysTemplate)
+        cell.categoryImage.tintColor = UIColor(red: 71/255.0, green: 55/255.0, blue: 115/255.0, alpha: 1.0)
         return cell
     }
     func collectionView(_ collectionView: UICollectionView,

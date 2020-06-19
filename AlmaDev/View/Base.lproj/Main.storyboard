@@ -501,7 +501,7 @@
                                 <color key="trackTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
                             <stackView contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="iHT-Gh-k17">
-                                <rect key="frame" x="16" y="229.5" width="382" height="492"/>
+                                <rect key="frame" x="16" y="229.5" width="382" height="567.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Choose correct answer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1LN-sx-rwY">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="20"/>
@@ -513,7 +513,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is a meanig?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oD-pA-jHD">
-                                        <rect key="frame" x="0.0" y="50" width="382" height="21.5"/>
+                                        <rect key="frame" x="0.0" y="50" width="382" height="180"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="180" id="NqU-dt-gPH"/>
                                         </constraints>
@@ -522,7 +522,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaO-Gy-qV3">
-                                        <rect key="frame" x="0.0" y="101.5" width="382" height="45"/>
+                                        <rect key="frame" x="0.0" y="260" width="382" height="45"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="mDI-vs-fVV"/>
@@ -537,7 +537,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gt9-4D-lT2">
-                                        <rect key="frame" x="0.0" y="176.5" width="382" height="45"/>
+                                        <rect key="frame" x="0.0" y="335" width="382" height="45"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="Hom-n9-mVm"/>
@@ -552,7 +552,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeN-3x-aOu">
-                                        <rect key="frame" x="0.0" y="251.5" width="382" height="45"/>
+                                        <rect key="frame" x="0.0" y="410" width="382" height="0.0"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="q4r-R7-m4r"/>
@@ -567,7 +567,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="es4-pb-gvL">
-                                        <rect key="frame" x="0.0" y="326.5" width="382" height="45"/>
+                                        <rect key="frame" x="0.0" y="440" width="382" height="7"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="MCz-lL-tb1"/>
@@ -582,7 +582,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer to proceed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3u-tK-v0h">
-                                        <rect key="frame" x="0.0" y="401.5" width="382" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="477" width="382" height="20.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20.5" id="fVa-ec-unK"/>
                                         </constraints>
@@ -591,7 +591,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="left" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDM-nh-uDi">
-                                        <rect key="frame" x="0.0" y="452" width="382" height="40"/>
+                                        <rect key="frame" x="0.0" y="527.5" width="382" height="40"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="DDg-IB-24f"/>
